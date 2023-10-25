@@ -1,0 +1,346 @@
+.fiti {
+  width: 150px;
+  height: 50px;
+  margin-top: -45px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.fiti i {
+  font-size: 40px;
+  background-color: #ffffff;
+  padding: 10px 15px 15px 15px;
+  border-radius: 30px;
+  color: #3a8d11;
+}
+
+#photo_gallery1_div {
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  background-image: url("");
+  border-radius: 00% 00% 00% 00%;
+  overflow: hidden;
+  padding: 20px 5px 10px 5px;
+  margin-bottom: 20px;
+}
+
+.photo_gallery1_heading {
+  text-align: center;
+  background-color: #ffffff;
+  background-image: url("");
+  border: 1px solid #ffffff;
+  border-radius: 00% 00% 00% 00%;
+  border-width: 0px 0px 0px 0px;
+  border-color: #ffffff;
+  border-style: solid;
+}
+
+.photo_gallery1_h2h {
+  padding: 0.8vw 0 0.8vw 0;
+  margin: 0;
+  font-size: 2vw;
+  color: #055382;
+  font-style: normal;
+  font-weight: normal;
+  font-family: times;
+}
+
+.photo_gallery1_h2h2 {
+  color: #055382;
+  font-style: normal;
+  font-weight: normal;
+  font-family: times;
+  font-size: 1.5vw;
+  padding: 0 0 0.8vw 0;
+  margin: 0;
+}
+
+.photo_gallery1_div1 {
+  width: 30%;
+  float: left;
+  text-align: center;
+  padding: 40px 1px 40px 3px;
+  margin: 1% 0% 1% 2.4%;
+  height: 500px;
+  overflow-y: hidden;
+  background-color: #ffffff;
+  border: 1px solid #0596f0;
+  background-image: url("");
+  border-radius: 00% 00% 00% 00%;
+  position: relative;
+}
+
+.photo_gallery1_div1 img {
+  width: 95%;
+  height: 100%;
+  max-height: 200px;
+  min-height: 150px;
+  padding: 5px;
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  border: 1px solid #0596f0;
+  border-radius: 00px 00px 00px 00px;
+}
+
+.photo_gallery1_div1 h2 i {
+  font-size: 2vw;
+  color: #1577b3 !important;
+}
+
+.photo_gallery1_div1 h2 {
+  font-size: 1.5vw;
+  text-align: left;
+  width: 95%;
+  margin: 25px auto 0px auto;
+  color: #1577b3;
+  font-style: normal;
+  font-weight: normal;
+  font-family: times;
+}
+
+.photo_gallery1_div1 p {
+  font-size: 1.3vw;
+  text-align: left;
+  width: 95%;
+  margin: 15px auto 0px auto;
+  padding: 25px 0px 25px 5px;
+  /* color: ;
+                        font-style: ;
+                        font-weight: ;
+                        font-family: ; */
+}
+
+.fut {
+  position: absolute;
+  bottom: 0;
+  padding: 0 0 10px 10px;
+}
+
+.fut div i {
+  font-size: 18px;
+  color: #1577b3;
+  padding-top: 2px;
+}
+
+.fut div {
+  border: 2px solid #1577b3;
+  float: left;
+  margin: 3px;
+  border-radius: 16px;
+  width: 30px;
+  height: 30px;
+}
+
+.photo_gallery1_oles p,
+.photo_gallery1_oles h2,
+.photo_gallery1_oles em,
+.photo_gallery1_oles span,
+.photo_gallery1_oles li {
+  color: #3a8d11 !important;
+  font-style: normal;
+  font-weight: normal;
+  font-family: times;
+}
+
+.photo_gallery1_oles {
+  height: 110px;
+}
+
+.photo_gallery1_loadmore1 {
+  border: 1px solid #1577b3;
+  background-color: #055382;
+  background-image: url("");
+  border-radius: 33px 33px 33px 33px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: normal;
+  font-family: times;
+  padding: 7px 40px 7px 40px;
+  border: 1px solid #1577b3;
+  clear: both;
+}
+
+.photo_gallery1_no-more-a {
+  text-align: center;
+  clear: both;
+  padding-top: 10px;
+  border: 1px solid #1577b3;
+  background-color: #055382;
+  background-image: url("");
+  border-radius: 33px 33px 33px 33px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: normal;
+  font-family: times;
+}
+
+.photo_gallery1_loadbutton,
+.photo_gallery1_no-more {
+  text-align: center;
+  clear: both;
+  padding-top: 10px;
+}
+
+.photo_gallery1_no-more-a1 {
+  text-align: center;
+  clear: both;
+  padding-top: 10px;
+  padding: 7px 40px 7px 40px;
+  color: #d1d1cf;
+  clear: both;
+}
+
+@media screen and (max-width: 1032px) {
+  .photo_gallery1_oles {
+    height: 135px;
+  }
+  .photo_gallery1_h2h {
+    padding: 1.8vw 0 1.8vw 0;
+    margin: 0;
+    font-size: 3vw;
+  }
+  .photo_gallery1_div1 h2 i {
+    font-size: 2.5vw;
+  }
+  .photo_gallery1_h2h2 {
+    font-size: 2.5vw;
+    padding: 0 0 1.8vw 0;
+    margin: 0;
+  }
+  .photo_gallery1_div1 h2 {
+    font-size: 1.8vw;
+  }
+  .photo_gallery1_div1 p {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .photo_gallery1_div1 {
+    margin: 1% 0% 1% 2.2%;
+    width: 30.7%;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .photo_gallery1_div1 img {
+    width: 95%;
+  }
+  .photo_gallery1_div1 {
+    padding: 40px 1px 40px 2px;
+  }
+  .photo_gallery1_div1 h2 i {
+    font-size: 3.2vw;
+  }
+  .photo_gallery1_div1 h2 {
+    font-size: 2vw;
+  }
+  .photo_gallery1_div1 p {
+    font-size: 1.6vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .photo_gallery1_div1 {
+    margin: 1% 0% 1% 2%;
+  }
+  .photo_gallery1_h2h {
+    font-size: 4vw;
+  }
+  .photo_gallery1_h2h2 {
+    font-size: 3.5vw;
+  }
+  .photo_gallery1_div1 h2 i {
+    font-size: 3.4vw;
+  }
+  .photo_gallery1_div1 h2 {
+    font-size: 2.2vw;
+  }
+  .photo_gallery1_div1 p {
+    font-size: 1.8vw;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .photo_gallery1_div1 {
+    margin: 1% 0% 1% 1%;
+    width: 48%;
+    height: auto;
+  }
+  .photo_gallery1_oles {
+    height: 90px;
+  }
+  .photo_gallery1_div1 img {
+    width: 95%;
+  }
+  .photo_gallery1_div1 h2 i {
+    font-size: 3.6vw;
+  }
+  .photo_gallery1_h2h {
+    padding: 2.8vw 0 2.8vw 0;
+    margin: 0;
+    font-size: 4vw;
+  }
+  .photo_gallery1_h2h2 {
+    font-size: 3.5vw;
+    padding: 0 0 2.8vw 0;
+    margin: 0;
+  }
+  .photo_gallery1_div1 h2 {
+    font-size: 2.5vw;
+  }
+  .photo_gallery1_div1 p {
+    font-size: 2.2vw;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .photo_gallery1_h2h {
+    padding: 3.8vw 0 3.8vw 0;
+    margin: 0;
+    font-size: 5vw;
+  }
+  .photo_gallery1_h2h2 {
+    font-size: 4.5vw;
+    padding: 0 0 3.8vw 0;
+    margin: 0;
+  }
+  .photo_gallery1_div1 h2 i {
+    font-size: 3.8vw;
+  }
+  .photo_gallery1_div1 h2 {
+    font-size: 2.8vw;
+  }
+  .photo_gallery1_div1 p {
+    font-size: 2.4vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .photo_gallery1_div1 {
+    margin: 1% 0% 1% 1%;
+    width: 97%;
+    height: 450px;
+  }
+  .photo_gallery1_div1 h2 i {
+    font-size: 4vw;
+  }
+  .photo_gallery1_div1 h2 {
+    font-size: 3.5vw;
+  }
+  .photo_gallery1_div1 p {
+    font-size: 3.2vw;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .photo_gallery1_h2h {
+    padding: 4.8vw 0 4.8vw 0;
+    margin: 0;
+    font-size: 7vw;
+  }
+  .photo_gallery1_h2h2 {
+    font-size: 5.5vw;
+    padding: 0 0 4.8vw 0;
+    margin: 0;
+  }
+}

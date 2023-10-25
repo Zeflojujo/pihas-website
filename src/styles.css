@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-attachment: fixed;
+  background-position: center;
+  /* Full height */
+  height: 100%;
+  width: 100%;
+  /* Center and scale the image nicely */
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  border-left: 5px solid #a19810;
+  border-right: 5px solid #a19810;
+}
+
+.contained-div {
+  width: 97%;
+  margin: auto;
+  /* background-color: !important; */
+  /* background-image: url(""); */
+  margin-top: 0px;
+  border: 5px solid #076ead;
+  box-shadow: 0 0 100px 20px #076ead;
+
+}
+
+@media screen and (max-width: 700px) {
+  .contained-div {
+    width: 100%;
+  }
+}

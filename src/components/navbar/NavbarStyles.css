@@ -1,0 +1,106 @@
+.navbarheader4 {
+  background-color: #a19810 !important;
+  overflow: hidden;
+}
+
+.navbarheader4 a {
+  float: left;
+  font-size: 1.2vw;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #fff !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-family: times;
+}
+
+.areseheader4 a {
+  color: #ffffff !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-family: American Typewriter, serif;
+}
+
+.dropdownheader4 {
+  float: left;
+}
+
+.dropdownheader4 .dropbtnheader4 {
+  font-size: 1.2vw;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-weight: bold;
+  font-family: inherit;
+  margin: 0;
+  color: #ffffff !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-family: American Typewriter, serif;
+}
+
+.dropbtnheader4 i {
+  font-size: 14px !important;
+}
+
+.areseheader4 a:hover,
+.dropdownheader4-content a:hover,
+.dropdownheader4:hover .dropbtnheader4 {
+  background-color: #a19810 !important;
+  color: #ffff00 !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-family: times;
+}
+
+.navbarheader4 a:hover {
+  background-color: 076ead !important;
+  color: #ffff00 !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-family: times;
+}
+
+.areseheader4 a:hover {
+  background-color: #a19810 !important;
+  color: #ffff00 !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-family: times;
+}
+
+.dropdownheader4-content {
+  display: none;
+  position: absolute;
+  background: #a19810 !important;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 999999999 !important;
+  padding: 7px 9px;
+  width: 100%;
+  min-width: 260px;
+  max-width: 360px;
+  float: left;
+}
+
+.dropdownheader4-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdownheader4-content a:hover {
+  color: #ffffff !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-family: times;
+}
+
+.dropdownheader4:hover .dropdownheader4-content {
+  display: block;
+}
