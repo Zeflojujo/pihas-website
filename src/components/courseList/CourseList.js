@@ -1,8 +1,8 @@
 import "./CourseListStyles.css";
 
-import nursing from '../../assets/kamcollege/a933abda64.jpg';
-import clinical from '../../assets/kamcollege/9196b537cf.jpg';
-import medical from '../../assets/kamcollege/427115f306.jpg';
+import nursing from '../../assets/kamcollege/library3.jpg';
+import clinical from '../../assets/kamcollege/library2.jpg';
+import medical from '../../assets/kamcollege/labo1.jpg';
 
 function CourseList() {
   return (

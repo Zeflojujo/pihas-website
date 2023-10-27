@@ -1,6 +1,6 @@
 import React from 'react'
 import "./FooterStyles.css";
-import director from '../../assets/kamcollege/d82cd8d6a3.jpg';
+import director from '../../assets/kamcollege/logo.png';
 import kamDsm from '../../assets/kamcollege/logo.png';
 import { Link } from 'react-router-dom';
 

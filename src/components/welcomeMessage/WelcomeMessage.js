@@ -1,5 +1,5 @@
 import "./WelcomeMessageStyles.css";
-import musika from '../../assets/kamcollege/acc0f2ec07.jpg';
+import musika from '../../assets/kamcollege/logo.png';
 
 
 function welcome() {

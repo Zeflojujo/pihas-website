@@ -1,6 +1,6 @@
 import './headToper.css';
-import head from '../../assets/kamcollege/42853ef933.jpg';
-import logo from '../../assets/kamcollege/logo.jpg';
+import head from '../../assets/kamcollege/42853ef933.png';
+import logo from '../../assets/kamcollege/logo.png';
 import flag from '../../assets/flags/us.png';
 
 
