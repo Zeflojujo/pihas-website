@@ -16,7 +16,7 @@ import Header from "../navbar/Headers";
 
 function Home() {
   return (
-    <div classNameName="App">
+    <div className="App">
 
       <Navbar/>
       

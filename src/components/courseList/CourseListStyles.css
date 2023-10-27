@@ -17,7 +17,7 @@
 #photo_gallery1_div {
   border: 1px solid #ffffff;
   background-color: #ffffff;
-  background-image: url("");
+  /* background-image: url(""); */
   border-radius: 00% 00% 00% 00%;
   overflow: hidden;
   padding: 20px 5px 10px 5px;
@@ -27,7 +27,7 @@
 .photo_gallery1_heading {
   text-align: center;
   background-color: #ffffff;
-  background-image: url("");
+  /* background-image: url(""); */
   border: 1px solid #ffffff;
   border-radius: 00% 00% 00% 00%;
   border-width: 0px 0px 0px 0px;
@@ -65,7 +65,7 @@
   overflow-y: hidden;
   background-color: #ffffff;
   border: 1px solid #0596f0;
-  background-image: url("");
+  /* background-image: url(""); */
   border-radius: 00% 00% 00% 00%;
   position: relative;
 }
@@ -148,7 +148,7 @@
 .photo_gallery1_loadmore1 {
   border: 1px solid #1577b3;
   background-color: #055382;
-  background-image: url("");
+  /* background-image: url(""); */
   border-radius: 33px 33px 33px 33px;
   color: #ffffff;
   font-style: normal;
@@ -165,7 +165,7 @@
   padding-top: 10px;
   border: 1px solid #1577b3;
   background-color: #055382;
-  background-image: url("");
+  /* background-image: url(""); */
   border-radius: 33px 33px 33px 33px;
   color: #ffffff;
   font-style: normal;

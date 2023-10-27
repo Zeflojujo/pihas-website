@@ -13,7 +13,7 @@ import SlideShow from "./components/pages/SlideShow";
 
 function App() {
   return (
-    <div classNameName="App">
+    <div className="App">
       <HashRouter>
         <Routes>
           <Route path="/" element={<Home/>}/>

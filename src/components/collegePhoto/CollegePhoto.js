@@ -17,21 +17,23 @@ function CollegePhoto() {
             <div className="campus2_list1">
                 <div className="campus2_div1">
                     <table style={{width:"100%"}}>
-                        <tr>
-                            <td style={{width:"4.5vw"}}><img src={cumpus2} alt="img1" className="campus2_ico1" /></td>
-                            <td style={{textAlign:"left"}}>
-                                <h2>PIHAS-LIBRARY</h2>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" style={{textAlign:"center"}}>
-                                <div className="campus2_oles">
-                                    <p style={{margin:"0", padding:"0"}}>
-                                        <p>Student are studying at college library</p>
-                                    </p>
-                                </div>
-                            </td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td style={{width:"4.5vw"}}><img src={cumpus2} alt="img1" className="campus2_ico1" /></td>
+                                <td style={{textAlign:"left"}}>
+                                    <h2>PIHAS-LIBRARY</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colSpan="2" style={{textAlign:"center"}}>
+                                    <div className="campus2_oles">
+                                        <div style={{margin:"0", padding:"0"}}>
+                                            <p>Student are studying at college library</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
 
                      {/* overflow-y:scroll;margin-top:-10px; <p style={{marginTop:"0px"}}>ok</p> */}
@@ -40,21 +42,23 @@ function CollegePhoto() {
                 </div>
                 <div className="campus2_div1">
                     <table style={{width:"100%"}}>
-                        <tr>
-                            <td style={{width:"4.5vw"}}><img src={cumpus21} alt="img1" className="campus2_ico1" /></td>
-                            <td style={{textAlign:"left"}}>
-                                <h2>PIHAS-HOSTEL</h2>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" style={{textAlign:"center"}}>
-                                <div className="campus2_oles">
-                                    <p style={{margin:"0", padding:"0"}}>
-                                        <p>PIHAS College hostel buildings view</p>
-                                    </p>
-                                </div>
-                            </td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td style={{width:"4.5vw"}}><img src={cumpus21} alt="img1" className="campus2_ico1" /></td>
+                                <td style={{textAlign:"left"}}>
+                                    <h2>PIHAS-HOSTEL</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colSpan="2" style={{textAlign:"center"}}>
+                                    <div className="campus2_oles">
+                                        <div style={{margin:"0", padding:"0"}}>
+                                            <p>PIHAS College hostel buildings view</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
 
                      {/* overflow-y:scroll;margin-top:-10px; <p style="margin-top:0px;">ok</p> */}
@@ -63,21 +67,23 @@ function CollegePhoto() {
                 </div>
                 <div className="campus2_div1">
                     <table style={{width:"100%"}}>
-                        <tr>
-                            <td style={{width:"4.5vw"}}><img src={cumpus21} alt="img1" className="campus2_ico1" /></td>
-                            <td style={{textAlign:"left"}}>
-                                <h2>PIHAS-DOCTORS</h2>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" style={{textAlign:"center"}}>
-                                <div className="campus2_oles">
-                                    <p style={{margin:"0", padding:"0"}}>
-                                        <p>Doctors at PIHAS College discussing some issues</p>
-                                    </p>
-                                </div>
-                            </td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td style={{width:"4.5vw"}}><img src={cumpus21} alt="img1" className="campus2_ico1" /></td>
+                                <td style={{textAlign:"left"}}>
+                                    <h2>PIHAS-DOCTORS</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colSpan="2" style={{textAlign:"center"}}>
+                                    <div className="campus2_oles">
+                                        <div style={{margin:"0", padding:"0"}}>
+                                            <p>Doctors at PIHAS College discussing some issues</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                      {/* overflow-y:scroll;margin-top:-10px; <p style="margin-top:0px;">ok</p> */}
 

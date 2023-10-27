@@ -19,9 +19,9 @@ function CourseList() {
                     <h2 style={{paddingBottom:"10px"}}>NURSING</h2>
                     {/* <p style={{marginTop:"0px"}}>ok</p> */}
                     <div className="photo_gallery1_oles" style={{marginTop:"-25px"}}>
-                        <p style={{margin:"0", padding:"0"}}>
+                        <div style={{margin:"0", padding:"0"}}>
                             <p>Certificate and Diploma in Nursing and Midwifery,Join us and earn competitive education proffesional on nursing and mieldwifery field;</p>
-                        </p>
+                        </div>
                     </div>
                     <div className="fut">
                         <div><i className="fa fa-twitter" aria-hidden="true"></i></div>
@@ -36,9 +36,9 @@ function CourseList() {
                     <h2 style={{paddingBottom:"10px"}}>CLINICAL MEDICINE</h2>
                     {/* <p style={{marginTop:"0px"}}>ok</p> */}
                     <div className="photo_gallery1_oles" style={{marginTop:"-25px"}}>
-                        <p style={{margin:"0", padding:"0"}}>
+                        <div style={{margin:"0", padding:"0"}}>
                             <p>Certificate and Diploma in Clinical Medicine,Join us and earn competitive education proffesional on Clinical Medicine field;</p>
-                        </p>
+                        </div>
                     </div>
                     <div className="fut">
                         <div><i className="fa fa-twitter" aria-hidden="true"></i></div>
@@ -53,9 +53,9 @@ function CourseList() {
                     <h2 style={{paddingBottom:"10px"}}>MEDICAL LABORATORY</h2>
                     {/* <p style={{marginTop:"0px"}}>ok</p> */}
                     <div className="photo_gallery1_oles" style={{marginTop:"-25px"}}>
-                        <p style={{margin:"0", padding:"0"}}>
+                        <div style={{margin:"0", padding:"0"}}>
                             <p>Certificate and Diploma in Medical Laboratory,Join us and earn competitive education proffesional on Medical Laboratory field;</p>
-                        </p>
+                        </div>
                     </div>
                     <div className="fut">
                         <div><i className="fa fa-twitter" aria-hidden="true"></i></div>

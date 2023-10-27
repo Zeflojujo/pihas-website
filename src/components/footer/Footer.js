@@ -10,10 +10,12 @@ function Footer() {
                 <div className="footer">
                     <div className="footer1">
                         <table style={{clear:"both"}}>
-                            <tr>
-                                <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true"></i></td>
-                                <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <a className="hyp" href="/">Pihas college is Located at Ruvuma, PERAMIHO - Morogoro. PIHAS college of health sciences is fully registered and accredited by the National Council for Technical Education (NACTE) and working closely with department of Human Resource Development of the ministry of health,community development,Gender,Elderly and Children to ensure quality standards and integrity of academic in our college.</a></td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true"></i></td>
+                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <a className="hyp" href="/">Pihas college is Located at Ruvuma, PERAMIHO - Morogoro. PIHAS college of health sciences is fully registered and accredited by the National Council for Technical Education (NACTE) and working closely with department of Human Resource Development of the ministry of health,community development,Gender,Elderly and Children to ensure quality standards and integrity of academic in our college.</a></td>
+                                </tr>
+                            </tbody>
                         </table>
 
                     </div>
@@ -29,28 +31,36 @@ function Footer() {
                     <div className="footer3">
                         <h2 className="c1">QUICK LINKS</h2>
                         <table style={{clear:"both"}}>
-                            <tr>
-                                <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true" style={{color:"#ffff00"}}></i></td>
-                                <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <Link className="hyp" to="/">Home</Link></td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true" style={{color:"#ffff00"}}></i></td>
+                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <Link className="hyp" to="/">Home</Link></td>
+                                </tr>
+                            </tbody>
                         </table>
                         <table style={{clear:"both"}}>
-                            <tr>
-                                <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true" style={{color:"#ffff00"}}></i></td>
-                                <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <Link className="hyp" to="/news">News and Events</Link></td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true" style={{color:"#ffff00"}}></i></td>
+                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <Link className="hyp" to="/news">News and Events</Link></td>
+                                </tr>
+                            </tbody>
                         </table>
                         <table style={{clear:"both"}}>
-                            <tr>
-                                <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true" style={{color:"#ffff00"}}></i></td>
-                                <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <Link className="hyp" to="/about">About Us</Link></td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true" style={{color:"#ffff00"}}></i></td>
+                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <Link className="hyp" to="/about">About Us</Link></td>
+                                </tr>
+                            </tbody>
                         </table>
                         <table style={{clear:"both"}}>
-                            <tr>
-                                <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true" style={{color:"#ffff00"}}></i></td>
-                                <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <Link className="hyp" to="/contact">Contact Us</Link></td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true" style={{color:"#ffff00"}}></i></td>
+                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <Link className="hyp" to="/contact">Contact Us</Link></td>
+                                </tr>
+                            </tbody>
                         </table>
 
                     </div>

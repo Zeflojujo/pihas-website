@@ -16,7 +16,7 @@ function welcome() {
                             <h2 className="ck2">MANAGING DIRECTOR</h2>
                         </div>
                         <div className="olesa">
-                            <p style={{margin:"0", padding:"0"}}>
+                            <div style={{margin:"0", padding:"0"}}>
                                 <p className="MsoNormal" style={{marginBottom: ".0001pt",  textAlign: "center", lineHeight: "normal",  background: "white",  background: "background1", alignContent: "center"}}><span style={{color: "#ff00ff"}}><strong><span style={{fontSize: "20pt",  fontFamily: 'Times New Roman' }}>WELCOME MESSAGE</span></strong>
                                     </span>
                                 </p>
@@ -25,7 +25,7 @@ function welcome() {
                                         Our college is located at Dar es salaam, Kimara - Korogwe. PIHAS college of health sciences is fully registered and accredited by the National Council for Technical Education (NACTE) and working closely with department of Human Resource Development of the ministry of health,community development,Gender,Elderly and Children to ensure quality standards and integrity of academic in our college.
                                     </span>
                                 </p>
-                            </p>
+                            </div>
                         </div>
                     </div>
                     <div className="news">

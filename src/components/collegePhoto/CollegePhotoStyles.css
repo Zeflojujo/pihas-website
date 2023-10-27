@@ -3,7 +3,7 @@
   padding: 0px 5px 10px 5px;
   border: 1px solid #70ff70;
   background-color: #056bab;
-  background-image: url("");
+  /* background-image: url(""); */
   border-radius: 05% 05% 05% 05%;
 }
 
@@ -11,7 +11,7 @@
   padding: 20px 0 10px 0;
   text-align: center;
   background-color: #056bab;
-  background-image: url("");
+  /* background-image: url(""); */
   border: 1px solid #ffffff;
   border-radius: 00% 00% 00% 00%;
   border-width: 0px 0px 0px 0px;
@@ -29,7 +29,7 @@
   overflow-y: hidden;
   background-color: #056bab;
   border: 1px solid #0fff0f;
-  background-image: url("");
+  /* background-image: url(""); */
   border-radius: 00% 15% 15% 00%;
 }
 
@@ -100,7 +100,7 @@
 .campus2_loadmore1 {
   border: 1px solid #70ff70;
   background-color: #034873;
-  background-image: url("");
+  /* background-image: url(""); */
   border-radius: 22px 22px 22px 22px;
   color: #ffffff;
   font-style: normal;

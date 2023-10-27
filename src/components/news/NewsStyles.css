@@ -43,7 +43,7 @@
   .welcome1_heading {
     text-align: center;
     background-color: #f0f0f0;
-    background-image: url("");
+    /* background-image: url(""); */
     border-radius: 00% 00% 00% 00%;
     border-width: 0px 0px 0px 0px;
     border-color: #6ac5fc;
@@ -177,14 +177,14 @@
   
   #welcome1_div {
     background-color: #d7edfc;
-    background-image: url("");
+    /* background-image: url(""); */
   }
   
   .welcome1_div1 {
     overflow-y: hidden;
     background-color: #0677bd;
     border: 1px solid #6ac5fc;
-    background-image: url("");
+    /* background-image: url(""); */
     border-radius: 00% 00% 00% 00%;
   }
   

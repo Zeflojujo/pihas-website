@@ -14,7 +14,7 @@
   margin-top: -10px;
   text-align: center;
   /* background-color: #; */
-  background-image: url("");
+  /* background-image: url(""); */
   border: 1px solid #b8a909;
   border-radius: 02% 02% 02% 02%;
   border-width: 7px 7px 7px 7px;
@@ -47,7 +47,7 @@
 #video_gallery1_div {
   border: 1px solid #34a4eb;
   /* background-color: #; */
-  background-image: url("");
+  /* background-image: url(""); */
   border-radius: 11% 11% 11% 11%;
   overflow: hidden;
   padding: 20px 5px 40px 5px;
@@ -94,7 +94,7 @@
   overflow-y: hidden;
   /* background-color: #; */
   border: 1px solid #34a4eb;
-  background-image: url("");
+  /* background-image: url(""); */
   border-radius: 05% 05% 05% 05%;
 }
 
@@ -149,7 +149,7 @@
 .video_gallery1_loadmore1 {
   border: 1px solid #34a4eb;
   /* background-color: #; */
-  background-image: url("");
+  /* background-image: url(""); */
   border-radius: 11px 11px 11px 11px;
   /* color: ;
                         font-style: ;
@@ -162,7 +162,7 @@
 .video_gallery1_no-more-a {
   border: 1px solid #34a4eb;
   /* background-color: #; */
-  background-image: url("");
+  /* background-image: url(""); */
   border-radius: 11px 11px 11px 11px;
   /* color: ;
                         font-style: ;

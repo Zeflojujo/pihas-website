@@ -14,7 +14,7 @@
   padding: 3px 0 3px 0;
   margin-bottom: 5px;
   background-color: #cec218;
-  background-image: url("");
+  /* background-image: url(""); */
   color: #ffffff;
   font-style: normal;
   font-weight: normal;
@@ -56,7 +56,7 @@
   padding: 1vw;
   padding-bottom: 40px;
   background-color: #cec218;
-  background-image: url("");
+  /* background-image: url(""); */
   background-repeat: no-repeat;
   background-size: 100% 100%;
   border-radius: 05% 05% 05% 05%;
@@ -144,7 +144,7 @@
   margin: 0.6% 0.4% 0.6% 0.4%;
   padding: 5px 0 5px 0;
   background-color: #043959;
-  background-image: url("");
+  /* background-image: url(""); */
   color: ffff00;
   font-style: normal;
   font-weight: normal;
