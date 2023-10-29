@@ -58,7 +58,7 @@ function ContactForm () {
 
                         <h3 style={{display: "flex", justifyContent: "center", alignItems: "center", margin: "auto", paddingBottom: "1rem", color: "#a19810"}}>WHERE WE ARE?</h3>
 
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.4025849995487!2d35.42032427495635!3d-10.625799617073719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18fcf19ae4c8031d%3A0x979edd1c5e7c6b2b!2sPERAMIHO%20INSTITUTE%20OF%20HEALTH%20AND%20ALLIED%20SCIENCES!5e0!3m2!1sen!2stz!4v1698174875521!5m2!1sen!2stz" width="600" height="450" style={{border:"0"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.4025849995487!2d35.42032427495635!3d-10.625799617073719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18fcf19ae4c8031d%3A0x979edd1c5e7c6b2b!2sPERAMIHO%20INSTITUTE%20OF%20HEALTH%20AND%20ALLIED%20SCIENCES!5e0!3m2!1sen!2stz!4v1698174875521!5m2!1sen!2stz" width="600" height="450" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
                         <div>
                             <p>Located at Ruvuma, PERAMIHO - Morogoro,</p>
