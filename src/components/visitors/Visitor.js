@@ -38,7 +38,7 @@ function Visitors() {
                     <div className="ctxt">Total</div>
                 </div>
                 <div className="visitors1_loadmore1">
-                    <a href="https://saristz.ac.tz/oas/kam/home" style={{textDecoration:"none", fontSize:"18px"}} className="visitors1_loadmore">KAM - DSM</a>
+                    <a href="https://saristz.ac.tz/oas/kam/home" style={{textDecoration:"none", fontSize:"18px"}} className="visitors1_loadmore">PIHAS - RUVUMA</a>
                 </div>
             </div>
         </div>
