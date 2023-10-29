@@ -13,6 +13,7 @@ import Slider from "../slider/Slider";
 import Visitor from "../visitors/Visitor";
 import WelcomeMessage from "../welcomeMessage/WelcomeMessage";
 import Header from "../navbar/Headers";
+import SlideShow from "./SlideShow";
 
 function Home() {
   return (
@@ -26,7 +27,8 @@ function Home() {
 
       <Main/>
 
-      <Slider/>
+      {/* <Slider/> */}
+      <SlideShow/>
 
       <WelcomeMessage/>
 
