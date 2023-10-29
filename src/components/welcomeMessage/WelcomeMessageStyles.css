@@ -159,7 +159,9 @@
 }
 
 #welcome1_div {
-  background-color: #d7edfc;
+  /* background-color: #d7edfc; */
+  background-color: #a19810;
+
   overflow: hidden;
   padding: 0px 5px 10px 5px;
 }
@@ -170,7 +172,10 @@
   width: 100%;
   padding: 20px 0 20px 0;
   overflow-y: hidden;
-  background-color: #0677bd;
+  /* background-color: #0677bd;
+   */
+  background-color: #a19810;
+
   border: 1px solid #6ac5fc;
   border-radius: 00% 00% 00% 00%;
 }

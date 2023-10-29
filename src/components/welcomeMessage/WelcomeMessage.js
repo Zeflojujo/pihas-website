@@ -9,7 +9,7 @@ function Welcome() {
         {/* <script src="https://use.fontawesome.com/c41a095f5d.js"></script> */}
         <div style={{clear:"both"}} id="welcome1_div">
             <div className="welcome1_list">
-                <div className="welcome1_div1">
+                <div className="welcome1_div1" style={{backgroundColor: "#a19810"}}>
                     <div className="welcome">
                         <div className="director">
                             <img src={musika} alt="defauleImage"/>
@@ -18,7 +18,7 @@ function Welcome() {
                         </div>
                         <div className="olesa">
                             <div style={{margin:"0", padding:"0"}}>
-                                <p className="MsoNormal" style={{marginBottom: ".0001pt",  textAlign: "center", lineHeight: "normal",  background: "#ccc", alignContent: "center"}}><span style={{color: "#ff00ff"}}><strong><span style={{fontSize: "20pt",  fontFamily: 'Times New Roman' }}>WELCOME MESSAGE</span></strong>
+                                <p className="MsoNormal" style={{marginBottom: "1rem",  textAlign: "center", lineHeight: "normal",  background: "#ccc", alignContent: "center"}}><span style={{color: "#ff00ff"}}><strong><span style={{fontSize: "20pt",  fontFamily: 'Times New Roman', color: "#a19810", marginBottom: "1rem" }}>WELCOME MESSAGE</span></strong>
                                     </span>
                                 </p>
                                 <p className="MsoNormal" style={{marginBottom: "auto",  textAlign: "justify", lineHeight: "normal",  background: "white"}}>

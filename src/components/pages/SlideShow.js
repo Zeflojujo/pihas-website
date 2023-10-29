@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {BsChevronCompactLeft, BsChevronCompactRight} from "react-icons/bs"
 
 function SlideShow() {
@@ -17,7 +17,7 @@ function SlideShow() {
     },
   ];
 
-  // const timerRef = useRef(null);
+  const timerRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
@@ -26,30 +26,23 @@ function SlideShow() {
     return setCurrentIndex(newIndex);
   }
 
-  const nextSlide = useCallback(() => {
+  const nextSlide = () => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     return setCurrentIndex(newIndex);
-  }, [currentIndex, slides]);
+  };
 
-  // useEffect(() => {
-  //   if(timerRef.current){
-  //     clearTimeout(timerRef.current);
-  //   }
-  //   timerRef.current = setTimeout(() => {
-  //     nextSlide();
-  //   }, 2000);
+  useEffect(() => {
+    if(timerRef.current){
+      clearTimeout(timerRef.current);
+    }
+    timerRef.current = setTimeout(() => {
+      nextSlide();
+    }, 5000);
 
-  //   return () => clearTimeout(timerRef.current);
-  // }), [nextSlide];
+    return () => clearTimeout(timerRef.current);
+  });
 
-  // useEffect(() => {
-
-  //  setTimeout(() => {
-  //     nextSlide();
-  //   }, 2000);
-
-  // }), [nextSlide];
 
   return (
     <div className="max-w-[100%] h-[500px] w-full m-auto py-2 px-2 relative group">

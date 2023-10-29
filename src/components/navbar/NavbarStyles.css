@@ -104,3 +104,20 @@
 .dropdownheader4:hover .dropdownheader4-content {
   display: block;
 }
+
+.areseheader4Menu {
+  display: none;
+}
+
+@media screen and (max-width: 690px) {
+  .areseheader4 a {
+    display: none;
+  }
+
+  .dropbtnheader4 {
+    display: none;
+  }
+  .areseheader4Menu {
+    display: block;
+  }
+}
