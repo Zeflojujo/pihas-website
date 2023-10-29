@@ -1,11 +1,13 @@
 import logo from '../../assets/kamcollege/logo.png';
 import head from '../../assets/kamcollege/42853ef933.png';
+import { BiMenu } from 'react-icons/bi';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Headers() {
     const [showme, setShowMe] = useState(false);
-    function showMenuItem() {
-        setShowMe({ showme: !showme });
+    const handleShowMe = () => {
+        setShowMe(!showme);
     }
   return (
     <>
@@ -18,8 +20,8 @@ function Headers() {
                 <h1>PERAMIHO COLLEGE OF HEALTH AND ALLIED SCIENCES</h1>
                 <span style={{clear:"both"}}>HEALTHY IS WEALTH</span>
                 <div className="header4_links">
-                <a id="menule" onClick={() => showMenuItem} style={{padding:"5px 10px 5px 10px", marginLeft:"5px", border:"2px solid #008000", borderRadius:"20px 20px 20px 20px"}}>
-                    <i className="fa fa-bars" style={{color:"#000"}} aria-hidden="true"></i>
+                <a id="menule" onClick={handleShowMe} style={{padding:"5px 10px 5px 10px", marginLeft:"5px", border:"2px solid #008000", borderRadius:"20px 20px 20px 20px"}}>
+                    <BiMenu size={24} />
                 </a>
                 <a href="https://saristz.ac.tz/login/kam" style={{display:"inline-block", padding:"5px 10px 5px 10px", border:"2px solid #008000", borderRadius:"20px 20px 20px 20px"}}>PIHAS-SARIS</a><a href="https://saristz.ac.tz/oas/kam/home" style={{display:"inline-block", padding:"5px 10px 5px 10px", marginLeft:"5px", border:"2px solid #008000", borderRadius:"20px 20px 20px 20px"}}> Apply-Now</a>
             </div>
@@ -37,7 +39,7 @@ function Headers() {
         <nav id="cbp-hrmenu" className="cbp-hrmenu" style={{marginTop:"-5px"}}>
             <ul style={{width:"100% !important", backgroundColor:"#076ead"}}>
                 <li>
-                    <a href="#" className="hvr-underline-from-center" style={{borderRadius:"00px 00px 00px 00px", fontWeight:"normal !important", color:"#ffffff !important"}}>Home</a>
+                    {/* <a href="#" className="hvr-underline-from-center" style={{borderRadius:"00px 00px 00px 00px", fontWeight:"normal !important", color:"#ffffff !important"}}>Home</a> */}
                     <div className="cbp-hrsub" style={{zIndex:"1", backgroundColor:"#076ead"}}>
                         <div className="cbp-hrsub-inner">
                             <div style={{padding:"0", margin:"0"}} className="sub-menu-int">
@@ -46,7 +48,7 @@ function Headers() {
                                         <tbody>
                                             <tr>
                                                 <td><i className="fa fa-angle-double-right" aria-hidden="true" style={{fontSize:"25px"}}></i></td>
-                                                <td><a href="" style={{ lineHeight: "1", textDecoration: "none" }}>Home</a></td>
+                                                <td><NavLink to={"/"} style={{ lineHeight: "1", textDecoration: "none" }}>Home</NavLink></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -60,7 +62,7 @@ function Headers() {
                     {/* <!-- /cbp-hrsub --> */}
                 </li>
                 <li>
-                    <a href="#" className="hvr-underline-from-center" style={{borderRadius:"00px 00px 00px 00px", fontWeight:"normal !important", color:"#ffffff !important"}}>About Us</a>
+                    <a href="#" className="hvr-underline-from-center" style={{padding:"0", margin:"0", borderRadius:"00px 00px 00px 00px", fontWeight:"normal !important", color:"#ffff00 !important"}}>About Us</a>
                     <div className="cbp-hrsub" style={{zIndex:"1", backgroundColor:"#076ead"}}>
                         <div className="cbp-hrsub-inner">
                             <div style={{padding:"0", margin:"0"}} className="sub-menu-int">
@@ -69,7 +71,7 @@ function Headers() {
                                         <tbody>
                                             <tr>
                                                 <td><i className="fa fa-angle-double-right" aria-hidden="true" style={{fontSize:"25px"}}></i></td>
-                                                <td><a href="KAM-Profile" style={{lineHeight: "1"}}>KAM Profile</a></td>
+                                                <td><NavLink to={"/profile"} style={{lineHeight: "1"}}>Pihas Profile</NavLink></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -83,7 +85,7 @@ function Headers() {
                                         <tbody>
                                             <tr>
                                                 <td><i className="fa fa-angle-double-right" aria-hidden="true" style={{fontSize:"25px"}}></i></td>
-                                                <td><a href="mission-vision-objectives" style={{lineHeight: "1"}}>Mission, Vision & Objectives</a></td>
+                                                <td><NavLink to={"/about"} style={{lineHeight: "1"}}>About Us</NavLink></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -96,7 +98,7 @@ function Headers() {
                     </div>
                     {/* <!-- /cbp-hrsub --> */}
                 </li>
-                <li>
+                {/* <li>
                     <a href="#" className="hvr-underline-from-center" style={{borderRadius:"00px 00px 00px 00px", fontWeight:"normal !important", color:"#ffffff !important"}}>Online Application</a>
                     <div className="cbp-hrsub" style={{zIndex:"1", backgroundColor:"#076ead"}}>
                         <div className="cbp-hrsub-inner">
@@ -116,10 +118,10 @@ function Headers() {
                             </div>
                         </div>
                         {/* <!-- /cbp-hrsub-inner --> */}
-                    </div>
+                    {/* </div> */}
                     {/* <!-- /cbp-hrsub --> */}
-                </li>
-                <li>
+                {/* </li> */}
+                {/* <li>
                     <a href="#" className="hvr-underline-from-center" style={{borderRadius:"00px 00px 00px 00px", fontWeight:"normal !important", color:"#ffffff !important"}}>Academic</a>
                     <div className="cbp-hrsub" style={{zIndex:1, backgroundColor:"#076ead"}}>
                         <div className="cbp-hrsub-inner">
@@ -167,10 +169,10 @@ function Headers() {
                             </div>
                         </div>
                         {/* <!-- /cbp-hrsub-inner --> */}
-                    </div>
+                    {/* </div> */}
                     {/* <!-- /cbp-hrsub --> */}
-                </li>
-                <li>
+                {/* </li> */}
+                {/* <li>
                     <a href="#" className="hvr-underline-from-center" style={{borderRadius:"00px 00px 00px 00px", fontWeight:"normal !important", color:"#ffffff !important"}}>Available Programs</a>
                     <div className="cbp-hrsub" style={{zIndex:1, backgroundColor:"#076ead"}}>
                         <div className="cbp-hrsub-inner">
@@ -190,11 +192,11 @@ function Headers() {
                             </div>
                         </div>
                         {/* <!-- /cbp-hrsub-inner --> */}
-                    </div>
+                    {/* </div> */}
                     {/* <!-- /cbp-hrsub --> */}
-                </li>
+                {/* </li> */} 
                 <li>
-                    <a href="#" className="hvr-underline-from-center" style={{borderRadius:"00px 00px 00px 00px", fontWeight:"normal !important", color:"#ffffff !important"}}>Contact Us</a>
+                    {/* <a href="#" className="hvr-underline-from-center" style={{borderRadius:"00px 00px 00px 00px", fontWeight:"normal !important", color:"#ffffff !important"}}>Contact Us</a> */}
                     <div className="cbp-hrsub" style={{zIndex:1, backgroundColor:"#076ead"}}>
                         <div className="cbp-hrsub-inner">
                             <div style={{padding:"0", margin:"0"}} className="sub-menu-int">
@@ -203,7 +205,7 @@ function Headers() {
                                         <tbody>
                                             <tr>
                                                 <td><i className="fa fa-angle-double-right" aria-hidden="true" style={{fontSize:"25px"}}></i></td>
-                                                <td><a href="Contact-Us" style={{lineHeight: "1"}}>Contact Us</a></td>
+                                                <td><NavLink to={"/contact"} style={{lineHeight: "1"}}>Contact Us</NavLink></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -217,7 +219,7 @@ function Headers() {
                     {/* <!-- /cbp-hrsub --> */}
                 </li>
                 <li>
-                    <a href="#" className="hvr-underline-from-center" style={{borderRadius:"00px 00px 00px 00px", fontWeight:"normal !important", color:"#ffffff !important"}}>News and Events</a>
+                    {/* <a href="#" className="hvr-underline-from-center" style={{borderRadius:"00px 00px 00px 00px", fontWeight:"normal !important", color:"#ffffff !important"}}>News and Events</a> */}
                     <div className="cbp-hrsub" style={{zIndex:1, backgroundColor:"#076ead"}}>
                         <div className="cbp-hrsub-inner">
                             <div style={{padding:"0", margin:"0"}} className="sub-menu-int">
@@ -226,7 +228,7 @@ function Headers() {
                                         <tbody>
                                             <tr>
                                                 <td><i className="fa fa-angle-double-right" aria-hidden="true" style={{fontSize:"25px"}}></i></td>
-                                                <td><a href="news-and-events" style={{lineHeight: "1"}}>News and Events</a></td>
+                                                <td><NavLink to={"/news"} style={{lineHeight: "1"}}>News and Events</NavLink></td>
                                             </tr>
                                         </tbody>
                                     </table>

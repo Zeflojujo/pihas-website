@@ -2,6 +2,8 @@ import './headToper.css';
 import head from '../../assets/kamcollege/42853ef933.png';
 import logo from '../../assets/kamcollege/logo.png';
 import flag from '../../assets/flags/us.png';
+import { MdOutlineMail } from 'react-icons/md';
+import { AiOutlinePhone } from 'react-icons/ai';
 
 
 function Navbar() {
@@ -11,8 +13,8 @@ function Navbar() {
         <div className="container container_header4">
         <div className="header4_toper">
             <div className="header4_toper1">
-                <span className="header4_title"><i style={{color:"#f7db05"}} className="fa fa-envelope-o" aria-hidden="true"></i> Email : info@pihas.ac.tz  </span>
-                <span><i  style={{color:"#f7db05"}} className="fa fa-phone" aria-hidden="true"></i> Call : +255-765-117-145</span>
+                <span className="header4_title" style={{display: "flex", flexDirection: "row", gap: "10px"}}><MdOutlineMail color='#dc3545' size={18}/> Email : info@pihas.ac.tz  </span>
+                <span style={{display: "flex", flexDirection: "row", rowGap: "10px", gap: "10px"}}><AiOutlinePhone color='#198754' size={18}/> Call : +255-765-117-145</span>
             </div>
 
             <div className="dropdown_header4">
