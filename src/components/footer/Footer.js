@@ -21,7 +21,7 @@ function Footer() {
                     </div>
                     <div className="footer2">
                         <div style={{textAlign:"center"}}>
-                            <div className="img_1">
+                            <div className="img_1" style={{margin: "auto", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column"}}>
                                 <img src={director} alt='defaultimage' />
                                 <div style={{textAlign:"center", marginTop:"5px", marginBottom:"15px"}}><span style={{margin:"0", padding:"0"}}><a style={{color:"#ffffff"}} className="img" href="/">Managing Director </a></span></div>
                             </div>
@@ -66,7 +66,7 @@ function Footer() {
                     </div>
                     <div className="footer4">
                         <div style={{textAlign:"center"}}>
-                            <div className="img_1">
+                            <div className="img_1" style={{margin: "auto", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column"}}>
                                 <img style={{width: "300px", height: "300px", border: "none", borderRadius: "none"}} src={kamDsm} alt='defaultimage' />
                                 <div style={{textAlign:"center", marginTop:"5px", marginBottom:"15px"}}><span style={{margin:"0", padding:"0"}}><a style={{color:"#ffffff"}} className="img" href="/">PIHAS - RUVUMA</a></span></div>
                             </div>
