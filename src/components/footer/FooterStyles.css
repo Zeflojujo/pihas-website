@@ -328,8 +328,9 @@
   .footer2,
   .footer3,
   .footer4 {
-    width: 85%;
-    margin-left: 0;
+    width: 99%;
+    margin-left: 0px;
+    margin-right: 20px;
   }
   .img_33 img {
     width: 80px;
@@ -367,4 +368,3 @@
     height: 45px;
   }
 }
-/* <script src="https://use.fontawesome.com/c41a095f5d.js"></script> */

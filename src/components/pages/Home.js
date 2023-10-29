@@ -6,7 +6,7 @@ import CollegePhoto from "../collegePhoto/CollegePhoto";
 import CourseList from "../courseList/CourseList";
 import CourseOffered from "../courseOffered/CourseOffered";
 import Footer from "../footer/Footer";
-import MenuItem from "../menueItems/MenuItem";
+// import MenuItem from "../menueItems/MenuItem";
 import Navbar from "../navbar/Navbar";
 import Main from "../navbar/MainPage";
 import Slider from "../slider/Slider";

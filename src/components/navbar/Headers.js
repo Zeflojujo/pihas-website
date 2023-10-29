@@ -5,7 +5,7 @@ import { useState } from 'react';
 function Headers() {
     const [showme, setShowMe] = useState(false);
     function showMenuItem() {
-        // setShowMe({ !showme });
+        setShowMe({ showme: !showme });
     }
   return (
     <>
@@ -18,7 +18,7 @@ function Headers() {
                 <h1>PERAMIHO COLLEGE OF HEALTH AND ALLIED SCIENCES</h1>
                 <span style={{clear:"both"}}>HEALTHY IS WEALTH</span>
                 <div className="header4_links">
-                <a id="menule" onClick="showhide(resmenu)" style={{padding:"5px 10px 5px 10px", marginLeft:"5px", border:"2px solid #008000", borderRadius:"20px 20px 20px 20px"}}>
+                <a id="menule" onClick={() => showMenuItem} style={{padding:"5px 10px 5px 10px", marginLeft:"5px", border:"2px solid #008000", borderRadius:"20px 20px 20px 20px"}}>
                     <i className="fa fa-bars" style={{color:"#000"}} aria-hidden="true"></i>
                 </a>
                 <a href="https://saristz.ac.tz/login/kam" style={{display:"inline-block", padding:"5px 10px 5px 10px", border:"2px solid #008000", borderRadius:"20px 20px 20px 20px"}}>PIHAS-SARIS</a><a href="https://saristz.ac.tz/oas/kam/home" style={{display:"inline-block", padding:"5px 10px 5px 10px", marginLeft:"5px", border:"2px solid #008000", borderRadius:"20px 20px 20px 20px"}}> Apply-Now</a>
@@ -33,7 +33,7 @@ function Headers() {
 
 
         {/* MenuItem */}
-        <div className="main" id="showmehidemeresmenu1" style={{display: "none"}}>
+        <div className="main" id="showmehidemeresmenu1" style={{ display: showme ? "block": "none" }}>
         <nav id="cbp-hrmenu" className="cbp-hrmenu" style={{marginTop:"-5px"}}>
             <ul style={{width:"100% !important", backgroundColor:"#076ead"}}>
                 <li>

@@ -1,8 +1,9 @@
 import "./WelcomeMessageStyles.css";
+import "./WelcomeMessage.css";
 import musika from '../../assets/kamcollege/logo.png';
 
 
-function welcome() {
+function Welcome() {
   return (
     <div style={{marginBottom:"10px"}}>
         {/* <script src="https://use.fontawesome.com/c41a095f5d.js"></script> */}
@@ -17,7 +18,7 @@ function welcome() {
                         </div>
                         <div className="olesa">
                             <div style={{margin:"0", padding:"0"}}>
-                                <p className="MsoNormal" style={{marginBottom: ".0001pt",  textAlign: "center", lineHeight: "normal",  background: "white",  background: "background1", alignContent: "center"}}><span style={{color: "#ff00ff"}}><strong><span style={{fontSize: "20pt",  fontFamily: 'Times New Roman' }}>WELCOME MESSAGE</span></strong>
+                                <p className="MsoNormal" style={{marginBottom: ".0001pt",  textAlign: "center", lineHeight: "normal",  background: "#ccc", alignContent: "center"}}><span style={{color: "#ff00ff"}}><strong><span style={{fontSize: "20pt",  fontFamily: 'Times New Roman' }}>WELCOME MESSAGE</span></strong>
                                     </span>
                                 </p>
                                 <p className="MsoNormal" style={{marginBottom: "auto",  textAlign: "justify", lineHeight: "normal",  background: "white"}}>
@@ -33,28 +34,12 @@ function welcome() {
                             <h2 className="h1">Latest Downloads</h2>
                             <div className="tk">
                                 <div className="tk1">
-                                    <p title="New" className="lib_new" style={{margin:"10px 0 0 10px", width:"30px", height:"30px"}}><img src='https://schooling.co.tz/img/new.gif' width='30' height='30' /></p>
+                                    <p title="New" className="lib_new" style={{margin:"10px 0 0 10px", width:"30px", height:"30px"}}><img src='https://schooling.co.tz/img/new.gif' width='30' height='30' alt="defaultImage" /></p>
                                 </div>
                                 <div className="right-d">
                                     <p style={{marginTop:"0px", marginLeft:"5px", marginBottom:"0", fontWeight:"bold", padding:"3px"}}><a href="downloadxpsqds1/61" className="ck">JOINING ISTRACTION KWA WATAKAO JIUNGA NA CHUO SEP 2023/2024</a></p>
                                     
-                                    
-                                
-                {/* <p style={{marginTop:"0px", marginLeft:"5px", marginBottom:0, fontWeight:"bold", padding:"3px"}}><a href="www/100/news/5f2b24e97ffilename-JOINING FORM - AFYA  2023 - 2024 (1).pdf" className="ck">JOINING ISTRACTION KWA WATAKAO JIUNGA NA CHUO SEP 2023/2024</a></p>
-                <p style={{marginTop:"0px", marginLeft:"5px", marginBottom:0, fontWeight:"bold", padding:"3px"}}><a href="downloadxpsqds/61" className="ck">JOINING ISTRACTION KWA WATAKAO JIUNGA NA CHUO SEP 2023/2024</a></p> --->
-                                    <p className="ck1">Placed : : 2023-07-01</p>
-                                </div>
-                            </div>
-                            <div className="tk">
-                                <div className="tk1">
-                                    <p title="New" className="lib_new" style={{margin:"10px 0 0 10px", width:"30px", height:"30px"}}><img src='https://schooling.co.tz/img/new.gif' width='30' height='30' /></p>
-                                </div>
-                                <div className="right-d">
-                                    <p style={{marginTop:"0px", marginLeft:"5px", marginBottom:"0", fontWeight:"bold", padding:"3px"}}><a href="downloadxpsqds1/57" className="ck">MAELEZO YA MUOMBAJI (AFYA) NEW 2023/2024</a></p>
-                                    */}
-
-
-                <p style={{marginTop:"0px", marginLeft:"5px", marginBottom:"0", fontWeight:"bold", padding:"3px"}}><a href="www/100/news/69a931f70cfilename-KAM Admission (1).pdf" className="ck">MAELEZO YA MUOMBAJI (AFYA) NEW 2023/2024</a></p>
+                                    <p style={{marginTop:"0px", marginLeft:"5px", marginBottom:"0", fontWeight:"bold", padding:"3px"}}><a href="www/100/news/69a931f70cfilename-KAM Admission (1).pdf" className="ck">MAELEZO YA MUOMBAJI (AFYA) NEW 2023/2024</a></p>
                 {/* <p style={{marginTop:"0px", marginLeft:"5px", marginBottom:"0", fontWeight:"bold", padding:"3px"}}><a href="downloadxpsqds/57" className="ck">MAELEZO YA MUOMBAJI (AFYA) NEW 2023/2024</a></p> */}
                                     <p className="ck1">Placed : : 2023-06-12</p>
                                 </div>
@@ -65,7 +50,7 @@ function welcome() {
                             <h2 className="h1">Latest news</h2>
                             <div className="tk">
                                 <div className="tk1">
-                                    <p title="New" className="lib_new" style={{margin:"10px 0 0 10px", width:"30px", height:"30px"}}><img src='https://schooling.co.tz/img/new.gif' width='30' height='30' /></p>
+                                    <p title="New" className="lib_new" style={{margin:"10px 0 0 10px", width:"30px", height:"30px"}}><img src='https://schooling.co.tz/img/new.gif' width='30' height='30' alt="defaultImage" /></p>
                                 </div>
                                 <div className="right-d">
                                     <p style={{marginTop:"0px", marginLeft:"5px", marginBottom:"0", fontWeight:"bold", padding:"3px"}}><a href="News-and-events/63" className="ck">JOINING ISTRACTION KWA WATAKAO JIUNGA NA CHUO 2023/2024</a></p>
@@ -74,7 +59,7 @@ function welcome() {
                             </div>
                             <div className="tk">
                                 <div className="tk1">
-                                    <p title="New" className="lib_new" style={{margin:"10px 0 0 10px", width:"30px", height:"30px"}}><img src='https://schooling.co.tz/img/new.gif' width='30' height='30' /></p>
+                                    <p title="New" className="lib_new" style={{margin:"10px 0 0 10px", width:"30px", height:"30px"}}><img src='https://schooling.co.tz/img/new.gif' width='30' height='30' alt="defaultImage" /></p>
                                 </div>
                                 <div className="right-d">
                                     <p style={{marginTop:"0px", marginLeft:"5px", marginBottom:"0", fontWeight:"bold", padding:"3px"}}><a href="News-and-events/25" className="ck">VETA COURSES PROGRAM WE ARE OFFERING</a></p>
@@ -83,7 +68,7 @@ function welcome() {
                             </div>
                             <div className="tk">
                                 <div className="tk1">
-                                    <p title="New" className="lib_new" style={{margin:"10px 0 0 10px", width:"30px", height:"30px"}}><img src='https://schooling.co.tz/img/new.gif' width='30' height='30' /></p>
+                                    <p title="New" className="lib_new" style={{margin:"10px 0 0 10px", width:"30px", height:"30px"}}><img src='https://schooling.co.tz/img/new.gif' width='30' height='30' alt="defaultImage" /></p>
                                 </div>
                                 <div className="right-d">
                                     <p style={{marginTop:"0px", marginLeft:"5px", marginBottom:"0", fontWeight:"bold", padding:"3px" }}><a href="News-and-events/60" className="ck">NACTE COURSES (PROGRAMMES) WE ARE OFFERING 2023/2024</a></p>
@@ -100,4 +85,4 @@ function welcome() {
   )
 }
 
-export default welcome
+export default Welcome;
