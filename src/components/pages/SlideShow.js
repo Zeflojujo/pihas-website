@@ -13,8 +13,14 @@ function SlideShow() {
       url: require("../../assets/kamcollege/labo1.jpg")
     },
     {
+      url: require("../../assets/kamcollege/library2.jpg")
+    },
+    {
       url: require("../../assets/kamcollege/library4.jpg")
     },
+    {
+      url: require("../../assets/kamcollege/library4.jpg")
+    }
   ];
 
   const timerRef = useRef(null);
@@ -38,15 +44,15 @@ function SlideShow() {
     }
     timerRef.current = setTimeout(() => {
       nextSlide();
-    }, 5000);
+    }, 7000);
 
     return () => clearTimeout(timerRef.current);
   });
 
 
   return (
-    <div className="max-w-[100%] h-[500px] w-full m-auto py-2 px-2 relative group">
-      <div style={{backgroundImage: `url(${slides[currentIndex].url})`, backgroundSize:"cover", backgroundRepeat: "no-repeat"}} className="w-full h-full rounded-2xl bg-center duration-500"></div>
+    <div className="max-w-[100%] h-[560px] w-full m-auto py-2 px-2 relative group">
+      <div style={{backgroundImage: `url(${slides[currentIndex].url})`, backgroundSize:"cover", backgroundRepeat: "no-repeat"}} className="w-full h-full rounded-2xl bg-center duration-700 transition-all"></div>
 
       {/* Left arrow */}
       <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
