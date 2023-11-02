@@ -17,11 +17,20 @@ import Slides from "./backend/pages/Slides";
 import Logout from "./backend/pages/logout";
 import Profiles from "./backend/pages/Profiles";
 import Login from "./backend/pages/Login";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
+  // function isLoggedIn() {
+  //   if (!localStorage.getItem('token')) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
   return (
     <div className="App" style={{borderLeft: "8px solid #a19810", borderRight: "8px solid #a19810"}}>
       <HashRouter>
+      <ScrollToTop/>
+
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/contact" element={<Contact/>}/>
@@ -30,6 +39,7 @@ function App() {
           <Route path="/profile" element={<Profile/>}/>
 
           <Route path="/slide" element={<SlideShow/>}/>
+          {/* <Route path="/admin/dashboard" element={() => (isLoggedIn() ? <Redirect to="/login" /> : <Dashboard />)} /> */}
           <Route path="/admin/dashboard" exact element={<Dashboard/>}/>
           <Route path="/admin/slides" element={<Slides/>}/>
           <Route path="/admin/profile" element={<Profiles/>}/>

@@ -83,7 +83,7 @@
   min-height: 150px;
   padding: 5px;
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-  border: 1px solid #42ff42;
+  border: 1px solid #cec218;
   border-radius: 22px 22px 22px 22px;
 }
 
@@ -93,9 +93,8 @@
   margin: 0px 0 0 10px;
   padding: 5px;
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-  border: 1px solid #42ff42;
+  border: 1px solid #cec218;
   border-radius: 50px;
-  border: 1px solid #42ff42;
   border-radius: 22px 22px 22px 22px;
 }
 
@@ -131,7 +130,7 @@
 }
 
 #visitors1_see {
-  border: 1px solid #66ff66;
+  border: 1px solid #cec218;
   background-color: #a19810;
   /* background-image: url(""); */
   border-radius: 00% 00% 00% 00%;
@@ -139,7 +138,7 @@
 
 .visitors1_div {
   overflow-y: hidden;
-  background-color: #cec218;
+  background-color: #b7b26c;
   border: 1px solid #41b3fa;
   /* background-image: url(""); */
   border-radius: 11% 11% 11% 11%;
@@ -168,7 +167,7 @@
                     } */
 
 .online {
-  border: 4px solid #42ff42;
+  border: 4px solid #ece147;
   border-radius: 22px 22px 22px 22px;
 }
 

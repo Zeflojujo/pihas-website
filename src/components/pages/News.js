@@ -28,6 +28,7 @@ function News() {
               >
                 <img
                   src="https://schooling.co.tz/img/new.gif"
+                  alt="defaultImage"
                   width="30"
                   height="30"
                 />
@@ -93,6 +94,7 @@ function News() {
               >
                 <img
                   src="https://schooling.co.tz/img/new.gif"
+                  alt="defaultImage"
                   width="30"
                   height="30"
                 />
@@ -152,6 +154,7 @@ function News() {
               >
                 <img
                   src="https://schooling.co.tz/img/new.gif"
+                  alt="defaultImage"
                   width="30"
                   height="30"
                 />
@@ -187,6 +190,7 @@ function News() {
               >
                 <img
                   src="https://schooling.co.tz/img/new.gif"
+                  alt="defaultImage"
                   width="30"
                   height="30"
                 />
@@ -222,6 +226,7 @@ function News() {
               >
                 <img
                   src="https://schooling.co.tz/img/new.gif"
+                  alt="defaultImage"
                   width="30"
                   height="30"
                 />

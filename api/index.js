@@ -68,8 +68,9 @@ const sendVerificationEmail = async(email,verificationToken) => {
 }
 
 //endpoint to register in the app
-app.post("/admin/register", async(req,res) => {
+app.post("/admin/login", async(req,res) => {
     try{
+      console.log("am here");
         const {name, email, password} = req.body;
 
         //check if the email is already registered
@@ -95,6 +96,41 @@ app.post("/admin/register", async(req,res) => {
         console.log("error registering user", error);
         res.status(500).json({message: "Registration failed" })
     }
+})
+
+//endpoint to login to the app
+app.post("/admin/login", async(req,res) => {
+  try{
+    console.log("am here");
+      const { email, password} = req.body;
+
+      //check if the email is already registered
+      const existingUser = await User.findOne({email});
+
+      if(!existingUser){
+          return res.status(400).json({message: "Invalid Email"});
+      }
+
+      if(user.password !== password){
+        return res.status(400).json({message: "Invalid password"});
+      }
+
+
+
+      //create a new User
+      const newUser = new User({ email, password});
+
+      //generate and store the verification token
+      newUser.verificationToken = crypto.randomBytes(20).toString('hex');
+
+      //save the user to the database
+      await User.save();
+
+
+  }catch(error){
+      console.log("error login user", error);
+      res.status(500).json({message: "Login failed" })
+  }
 })
 
 //endpoint to verify the email

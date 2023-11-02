@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLoginUser = () => {
-    const user = {
+  const handleLoginUser = async () => {
+    const admin = {
         email: email,
         password: password
     }
 
-    //send a post request to the backend AP
-    axios.post('http://localhost:8000/admin/login', user).then((response) => {
+    await axios.post('http://localhost:8000/admin/login', admin).then((response) => {
         console.log(response);
         alert("Login successfully");
 
@@ -22,6 +22,9 @@ const Login = () => {
         alert("login error", error);
         console.log("login failed", error);
     })
+
+    //send a post request to the backend AP
+    
   }
 
   return (
@@ -35,11 +38,12 @@ const Login = () => {
           </label>
           <input
             value={email}
-            onChange={(text) => setPassword(text)}
+            onChange={(e) => setEmail(e.target.value)}
             type="text"
             id="username"
             className="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
             placeholder="Enter username..."
+            required
           />
         </div>
         <div className="mt-3">
@@ -48,11 +52,13 @@ const Login = () => {
           </label>
           <input
             value={password}
-            onChange={(text) => setPassword(text)}
+            onChange={(e) => setPassword(e.target.value)}
             type="password"
+            autoComplete="off"
             id="password"
             className="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
             placeholder="Enter password..."
+            required
           />
         </div>
         <div className="flex items-center  justify-between mt-3">
@@ -67,7 +73,7 @@ const Login = () => {
           </div>
         </div>
         <div className="w-full mt-3">
-          <button onClick={() => handleLoginUser} className="border-2 border-blue-500 bg-blue-500 text-white py-1 w-full rounded-md hover:bg-transparent hover:text-blue-400 font-semibold">
+          <button onClick={(e) => handleLoginUser()} className="border-2 border-blue-500 bg-blue-500 text-white py-1 w-full rounded-md hover:bg-transparent hover:text-blue-400 font-semibold">
             Login
           </button>
         </div>

@@ -9,7 +9,6 @@ import Footer from "../footer/Footer";
 // import MenuItem from "../menueItems/MenuItem";
 import Navbar from "../navbar/Navbar";
 import Main from "../navbar/MainPage";
-import Slider from "../slider/Slider";
 import Visitor from "../visitors/Visitor";
 import WelcomeMessage from "../welcomeMessage/WelcomeMessage";
 import Header from "../navbar/Headers";
@@ -27,7 +26,6 @@ function Home() {
 
       <Main/>
 
-      {/* <Slider/> */}
       <SlideShow/>
 
       <WelcomeMessage/>

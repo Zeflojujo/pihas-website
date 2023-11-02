@@ -10,18 +10,11 @@ function CourseOffered() {
             </div>
             <form action="" method="POST" encType="multipart/form-data">
                 <div className="header0">
-                    <label className="search-pg">Search</label>
+                    <label className="search-pg">Courses </label>
                     <select type="text" name="region" id="countries-list" className="searcha" style={{height:"35px", padding:"5px"}} required>
-                        <option>select category to view</option>
-                        <option></option>
+                        <option>view course offered</option>
                         <option value="ORDINARY DIPLOMA/TECHNICIAN CERTIFICATE IN CLINICAL MEDICINE.">ORDINARY DIPLOMA/TECHNICIAN CERTIFICATE IN CLINICAL MEDICINE.</option>
                         <option value="ORDINARY DIPLOMA/TECHNICIAN CERTIFICATE IN PHARMACEUTICAL SCIENCE">ORDINARY DIPLOMA/TECHNICIAN CERTIFICATE IN PHARMACEUTICAL SCIENCE</option>
-                        <option value="ORDINARY DIPLOMA/TECHNICIAN CERTIFICATE IN NURSING">ORDINARY DIPLOMA/TECHNICIAN CERTIFICATE IN NURSING</option>
-                        <option value="ORDINARY DIPLOMA/TECHNICIAN CERTIFICATE IN IN CLINICAL DENTISTRY">ORDINARY DIPLOMA/TECHNICIAN CERTIFICATE IN IN CLINICAL DENTISTRY</option>
-                        <option value="ORDINARY DIPLOMA / TECHNICIAN CERTIFICATE IN ENVIRONMENTAL HEALTH SCIENCES:">ORDINARY DIPLOMA / TECHNICIAN CERTIFICATE IN ENVIRONMENTAL HEALTH SCIENCES:</option>
-                        <option value="ORDINARY DIPLOMA/ TECHNICIAN CERTIFICATE IN HEALTH RECORDS MANAGEMENT">ORDINARY DIPLOMA/ TECHNICIAN CERTIFICATE IN HEALTH RECORDS MANAGEMENT</option>
-                        <option value="ORDINARY DIPLOMA/ TECHNICIAN CERTIFICATE IN SOCIAL WORK">ORDINARY DIPLOMA/ TECHNICIAN CERTIFICATE IN SOCIAL WORK</option>
-                        <option value="ORDINARY DIPLOMA / TECHNICIAN CERTIFICATE IN MEDICAL LABORATORY.">ORDINARY DIPLOMA / TECHNICIAN CERTIFICATE IN MEDICAL LABORATORY.</option>
                     </select>
                 </div>
                 <div style={{margin:"0"}}>
