@@ -21,7 +21,7 @@ function Headers() {
           <img src={logo} alt="defualtImage" />
         </div>
         <div className="header4_logo2">
-          <h1>PERAMIHO COLLEGE OF HEALTH AND ALLIED SCIENCES</h1>
+          <h1 style={{fontFamily: ""}}>PERAMIHO COLLEGE OF HEALTH AND ALLIED SCIENCES</h1>
           <span style={{ clear: "both" }}>HEALTHY IS WEALTH</span>
           <div className="header4_links">
             <a
@@ -32,6 +32,8 @@ function Headers() {
                 border: "2px solid #008000",
                 borderRadius: "20px 20px 20px 20px",
               }}
+              className=" text-[12px] sm:text-[12px] lg:text-[16px]"
+
             >
               PIHAS-SARIS
             </a>
@@ -44,8 +46,9 @@ function Headers() {
                 border: "2px solid #008000",
                 borderRadius: "20px 20px 20px 20px",
               }}
+              className="text-[12px] sm:text-[12px] lg:text-[16px]"
+
             >
-              {" "}
               Apply-Now
             </Link>
           </div>

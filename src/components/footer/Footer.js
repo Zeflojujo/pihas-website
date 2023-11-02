@@ -77,7 +77,7 @@ function Footer() {
                         <div style={{textAlign:"center"}}>
                             <div className="img_1" style={{margin: "auto", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column"}}>
                                 <img style={{width: "300px", height: "300px", border: "none", borderRadius: "none"}} src={kamDsm} alt='defaultimage' />
-                                <div style={{textAlign:"center", marginTop:"5px", marginBottom:"15px"}}><span style={{margin:"0", padding:"0"}}><a style={{color:"#ffffff"}} className="img" href="/">PIHAS - RUVUMA</a></span></div>
+                                <div style={{textAlign:"center", marginTop:"5px", marginBottom:"15px"}}><span style={{margin:"0", padding:"0"}}><a style={{color:"#ffffff", fontSize: "24px"}} className="img" href="/">PIHAS - RUVUMA</a></span></div>
                             </div>
                         </div>
 

@@ -22,8 +22,8 @@ function Welcome() {
                                     </span>
                                 </p>
                                 <p className="MsoNormal" style={{marginBottom: "auto",  textAlign: "justify", lineHeight: "normal",  background: "white"}}>
-                                    <span id="welcomespan">
-                                        Our college is located at Dar es salaam, Kimara - Korogwe. PIHAS college of health sciences is fully registered and accredited by the National Council for Technical Education (NACTE) and working closely with department of Human Resource Development of the ministry of health,community development,Gender,Elderly and Children to ensure quality standards and integrity of academic in our college.
+                                    <span id="welcomespan" className="text-base sm-text-1xl">
+                                        Our college is located at Ruvuma, Songea - Parangio. PIHAS college of health sciences is fully registered and accredited by the National Council for Technical Education (NACTE) and working closely with department of Human Resource Development of the ministry of health,community development,Gender,Elderly and Children to ensure quality standards and integrity of academic in our college.
                                     </span>
                                 </p>
                             </div>

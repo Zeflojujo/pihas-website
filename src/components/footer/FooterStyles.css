@@ -52,7 +52,7 @@
 .footer4 {
   float: left;
   margin: 5px;
-  width: 22%;
+  width: 24.2%;
   padding: 1vw;
   padding-bottom: 40px;
   background-color: #cec218;
@@ -182,7 +182,7 @@
   .footer4 {
     float: left;
     margin: 5px;
-    width: 21.5%;
+    width: 24%;
   }
 }
 
@@ -197,14 +197,14 @@
   .footer4 {
     float: left;
     margin: 5px;
-    width: 21.2%;
+    width: 23.7%;
   }
 }
 
 @media screen and (max-width: 960px) {
   .img_33 img {
     width: 45px;
-    height: 45px;
+    height: 47px;
   }
   .c1 {
     font-size: 2vw;
@@ -216,7 +216,7 @@
   .footer2,
   .footer3,
   .footer4 {
-    width: 45.4%;
+    width: 48.4%;
   }
   .footer3 {
     clear: both;
@@ -235,7 +235,7 @@
   .footer2,
   .footer3,
   .footer4 {
-    width: 45%;
+    width: 47.8%;
   }
 }
 
@@ -244,7 +244,7 @@
   .footer2,
   .footer3,
   .footer4 {
-    width: 44.7%;
+    width: 47.7%;
   }
   .img_33 img {
     width: 70px;

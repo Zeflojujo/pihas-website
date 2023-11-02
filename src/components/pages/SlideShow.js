@@ -4,22 +4,34 @@ import {BsChevronCompactLeft, BsChevronCompactRight} from "react-icons/bs"
 function SlideShow() {
   const slides = [
     {
-      url: require("../../assets/kamcollege/pihasBuild.jpg")
+      url: require("../../assets/kamcollege/pihasBuild.jpg"),
+      title: "PIHAS BUILDING", 
+      description: "Pihas administration Block"
     },
     {
-      url: require("../../assets/kamcollege/library1.jpg")
+      url: require("../../assets/kamcollege/library1.jpg"),
+      title: "PIHAS LIBRARY", 
+      description: "Pihas administration Block "
     },
     {
-      url: require("../../assets/kamcollege/labo1.jpg")
+      url: require("../../assets/kamcollege/labo1.jpg"),
+      title: "PIHAS", 
+      description: "Pihas administration Block"
     },
     {
-      url: require("../../assets/kamcollege/library2.jpg")
+      url: require("../../assets/kamcollege/library2.jpg"),
+      title: "PIHAS BUILDING", 
+      description: "Pihas administration Block"
     },
     {
-      url: require("../../assets/kamcollege/library4.jpg")
+      url: require("../../assets/kamcollege/library4.jpg"),
+      title: "PIHAS BUILDING", 
+      description: "Pihas administration Block "
     },
     {
-      url: require("../../assets/kamcollege/library4.jpg")
+      url: require("../../assets/kamcollege/library4.jpg"),
+      title: "PIHAS BUILDING", 
+      description: "Pihas administration Block "
     }
   ];
 
@@ -51,8 +63,48 @@ function SlideShow() {
 
 
   return (
-    <div className="max-w-[100%] h-[560px] w-full m-auto py-2 px-2 relative group">
-      <div style={{backgroundImage: `url(${slides[currentIndex].url})`, backgroundSize:"cover", backgroundRepeat: "no-repeat"}} className="w-full h-full rounded-2xl bg-center duration-700 transition-all"></div>
+    <div className="max-w-[100%] h-[560px] w-full m-auto py-2 pb-2 sm:px-0  relative group">
+
+        <div style={{backgroundImage: `url(${slides[currentIndex].url})`, backgroundSize:"cover", backgroundRepeat: "no-repeat", resize:"contain"}} className="absolute justify-center items-center w-full h-full rounded-2xl bg-center duration-700 transition-all">
+          <div className="absolute justify-center items-center md:w-[60%] lg:w-[40%] top-[40%] lg:ml-[30%]  md:ml-[20%] ml-[13%] mr-[5%] sm:ml-[5%]  duration-300 animate-bounce">
+            {
+              currentIndex===0?
+                <div className="rounded-md" style={{backgroundColor: 'white', padding: 16}}>
+                  <h2 className="font-semibold text-center lg:text-3xl md:text-2xl sm:text-2xl text-2xl" style={{ color: "#a19810"}}>PIHAS BUILDING</h2>
+                  <p className="mt-3 lg:text-lg md:text-base">Students at the Pihas Administration Block</p>
+                </div>
+                : currentIndex===1?
+                  <div className="rounded-md" style={{backgroundColor: 'white', padding: 16}}>
+                    <h2 className="font-semibold text-center lg:text-3xl md:text-2xl sm:text-2xl text-2xl" style={{ color: "#a19810"}}>PIHAS LIBRARY</h2>
+                    <p className="mt-3 lg:text-lg md:text-base">Pihas Administration Block</p>
+                  </div>
+                  :currentIndex===2?
+                    <div className="rounded-md overflow:hidden" style={{backgroundColor: 'white', padding: 16}}>
+                      <h2 className="font-semibold text-center lg:text-3xl md:text-2xl sm:text-2xl text-2xl" style={{ color: "#a19810"}}>PIHAS PHARMACY LABORATORY</h2>
+                      <p className="mt-3 lg:text-lg md:text-base">The Pharmaceautical pihas laboratory</p>
+                    </div>
+                    :currentIndex===3?
+                      <div className="rounded-md" style={{backgroundColor: 'white', padding: 16}}>
+                        <h2 className="font-semibold text-center lg:text-3xl md:text-2xl sm:text-2xl text-2xl" style={{ color: "#a19810"}}>PIHAS GRADUATION CEREMONY</h2>
+                        <p className="mt-3 lg:text-lg md:text-base">Student during graduation ceremony</p>
+                      </div>
+                      
+                      : currentIndex===4?
+                        <div className="rounded-md" style={{backgroundColor: 'white', padding: 16}}>
+                          <h2 className="font-semibold text-center lg:text-3xl md:text-2xl sm:text-2xl text-2xl" style={{ color: "#a19810"}}>PIHAS LIBRARY</h2>
+                          <p className="mt-3 lg:text-lg md:text-base">Pihas Administration Block</p>
+                        </div>
+                        :currentIndex===5?
+                          <div className="rounded-md" style={{backgroundColor: 'white', padding: 16}}>
+                            <h2 className="font-semibold text-center lg:text-3xl md:text-2xl sm:text-2xl text-2xl" style={{ color: "#a19810"}}>PIHAS LIBRARY</h2>
+                            <p className="mt-3 lg:text-lg md:text-base">Pihas Administration Block</p>
+                          </div>
+                          :""
+            }
+          </div>
+            
+        </div>
+
 
       {/* Left arrow */}
       <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">

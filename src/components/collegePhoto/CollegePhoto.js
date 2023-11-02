@@ -11,7 +11,7 @@ function CollegePhoto() {
     <div style={{marginBottom:"10px"}}>
         <div style={{clear:"both"}} id="campus2_div">
             <div className="campus2_heading">
-                <h2 className="campus2_h2h">PIHAS COLLEGE PHOTOS</h2>
+                <h2 className="campus2_h2h" style={{fontSize: "24px"}}>PIHAS COLLEGE PHOTOS</h2>
                 <p className="campus2_h2h2">(PIHAS college photos)</p>
             </div>
             <div className="campus2_list1">

@@ -20,7 +20,7 @@ import Login from "./backend/pages/Login";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{borderLeft: "8px solid #a19810", borderRight: "8px solid #a19810"}}>
       <HashRouter>
         <Routes>
           <Route path="/" element={<Home/>}/>

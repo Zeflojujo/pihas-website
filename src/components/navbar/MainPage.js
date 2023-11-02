@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import "./NavbarStyles.css";
-import "./NavbarStyles.css";
 import { BiMenu } from "react-icons/bi";
 import { useState } from "react";
 
@@ -14,26 +13,26 @@ function MainPage() {
     <>
       {/* main */}
       <div
-        className="main"
+        className="main duration-300 transition-all"
         id="showmehidemeresmenu"
-        style={{ height: "auto", backgroundColor: "#a19810" }}
+        style={{ height: "auto", backgroundColor: "#a19810", "zIndex":"999" }}
       >
         
         <div
-          className="navbarheader4"
+          className="navbarheader4 duration-300"
           style={{ width: "95%", margin: "auto", color: "#fff" }}
         >
             <div className="areseheader4Menu">
             <NavLink
               href="available-programs"
-              style={{ borderRadius: "00px 00px 00px 00px" }}
+              style={{ borderRadius: "00px 00px 00px 00px", backgroundColor: "#a19810" }}
             >
               <BiMenu onClick={handleShowMe} size={24} />
             </NavLink>
           </div>
 
           <div className="areseheader4">
-            <NavLink to={"/"} style={{ borderRadius: "00px 00px 00px 00px" }}>
+            <NavLink to={"/"} style={{ borderRadius: "00px 00px 00px 00px", padding: "16px" }}>
               Home
             </NavLink>
           </div>
@@ -116,16 +115,16 @@ function MainPage() {
 
       {/* MenuItem */}
       <div
-        className="main"
+        className="main duration-300"
         id="showmehidemeresmenu1"
-        style={{ display: showme ? "block" : "none", backgroundColor: "#a19810" }}
+        style={{ display: showme ? "block" : "none", backgroundColor: "#a19810", }}
       >
         <nav
           id="cbp-hrmenu"
-          className="cbp-hrmenu"
+          className="cbp-hrmenu duration-300"
           style={{ marginTop: "-5px", backgroundColor: "#a19810", color: "white !important" }}
         >
-          <ul style={{ width: "100% !important", backgroundColor: "#a19810" }}>
+          <ul className="duration-300 pl-3 pr-3 bg-none" style={{ width: "100% !important", backgroundColor: "#a19810" }}>
             <li>
               <div
                 className="cbp-hrsub"

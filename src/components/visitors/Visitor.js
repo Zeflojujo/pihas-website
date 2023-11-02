@@ -5,7 +5,7 @@ function Visitors() {
     <div style={{marginBottom:"10px", backgroundColor: "#a19810"}}>
         <div style={{clear:"both"}} id="visitors1_see">
             <div className="visitors1_heading">
-                <h2 className="visitors1_h2h">PIHAS-VISITORS</h2>
+                <h2 className="visitors1_h2h" style={{fontSize: "24px"}}>PIHAS-VISITORS</h2>
                 <p className="visitors1_h2h2">(Trending and accesibility of our website 24/7)</p>
             </div>
             <div className="visitors1_list1">

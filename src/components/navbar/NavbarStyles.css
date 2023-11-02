@@ -3,6 +3,10 @@
   overflow: hidden;
 }
 
+.areseheader4 a.active{
+  color:#ffff00;
+}
+
 .navbarheader4 a {
   float: left;
   font-size: 1.2vw;
@@ -17,6 +21,7 @@
 }
 
 .areseheader4 a {
+  background-color: #a19810 !important;
   color: #ffffff !important;
   font-style: normal;
   font-weight: normal !important;
@@ -57,7 +62,7 @@
 }
 
 .navbarheader4 a:hover {
-  background-color: 076ead !important;
+  /* background-color: #076ead !important; */
   color: #ffff00 !important;
   font-style: normal;
   font-weight: normal !important;

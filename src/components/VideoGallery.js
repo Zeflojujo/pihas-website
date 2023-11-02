@@ -5,7 +5,7 @@ function VideoGallery() {
     <div style={{marginBottom:"10px"}}>
         <div style={{clear:"both"}} id="video_gallery1_div">
             <div className="video_gallery1_heading">
-                <h2 className="video_gallery1_h2h">PIHAS COLLEGE VIDEO GALLARY</h2>
+                <h2 className="video_gallery1_h2h" style={{fontSize: "24px"}}>PIHAS COLLEGE VIDEO GALLARY</h2>
                 <p className="video_gallery1_h2h2">Healthy is Wealth</p>
             </div>
             <div className="video_gallery1_list1">

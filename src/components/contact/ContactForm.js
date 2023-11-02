@@ -8,8 +8,8 @@ function ContactForm () {
         <div className="main-container">
 
         <div className="heading" >
-                <h1 style={{display: "flex", justifyContent: "center", alignContent: "center", margin: "auto", marginBottom: "1rem", color: "#645e08"}}>CONTACT US</h1>
-                <p style={{display: "flex", justifyContent: "center", alignContent: "center", margin: "auto"}}>You can reach us via.</p>
+                <h1 style={{display: "flex", justifyContent: "center", alignContent: "center", margin: "auto", marginBottom: "1rem", color: "#645e08", fontSize: "2rem"}}>CONTACT US</h1>
+                <p style={{display: "flex", justifyContent: "center", alignContent: "center", margin: "auto", fontStyle: "italic"}}>( You can reach and communicate with us via. )</p>
             </div>
             <hr className="horizontalLine"/>
 
@@ -51,16 +51,12 @@ function ContactForm () {
 
 
                     <div className="map">
-                        {/* <h2>Contacts</h2>
-                        <p>Email: info@pihas.ac.tz</p>
-                        <p>Phone1: +255-765-117-145</p>
-                        <p>Phone1: +255-765-117-145</p> */}
 
                         <h3 style={{display: "flex", justifyContent: "center", alignItems: "center", margin: "auto", paddingBottom: "1rem", color: "#a19810"}}>WHERE WE ARE?</h3>
 
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.4025849995487!2d35.42032427495635!3d-10.625799617073719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18fcf19ae4c8031d%3A0x979edd1c5e7c6b2b!2sPERAMIHO%20INSTITUTE%20OF%20HEALTH%20AND%20ALLIED%20SCIENCES!5e0!3m2!1sen!2stz!4v1698174875521!5m2!1sen!2stz" width="600" height="450" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.4025849995487!2d35.42032427495635!3d-10.625799617073719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18fcf19ae4c8031d%3A0x979edd1c5e7c6b2b!2sPERAMIHO%20INSTITUTE%20OF%20HEALTH%20AND%20ALLIED%20SCIENCES!5e0!3m2!1sen!2stz!4v1698174875521!5m2!1sen!2stz" width="600" height="450" style={{border:"0"}} allowFullScreen="" loading="lazy" title="LocationMap" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
-                        <div>
+                        <div className="mt-3">
                             <p>Located at Ruvuma, PERAMIHO - Morogoro,</p>
                             <p>Address : P.O.Box 93 PERAMIHO -TANZANIA,</p>
                             <p>Phone : +255765117145,</p>
