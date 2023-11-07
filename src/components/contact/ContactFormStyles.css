@@ -49,7 +49,7 @@
     /* width: 50%; */
 }
 
-.form-container form span {
+.form-container form label {
     color: rgb(245, 82, 37);
     font-weight: bold;
     font-size: 1.1rem;

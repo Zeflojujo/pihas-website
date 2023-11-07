@@ -18,6 +18,7 @@ import Logout from "./backend/pages/logout";
 import Profiles from "./backend/pages/Profiles";
 import Login from "./backend/pages/Login";
 import ScrollToTop from "./components/ScrollToTop";
+import Register from "./backend/pages/Register";
 
 function App() {
   // function isLoggedIn() {
@@ -26,7 +27,9 @@ function App() {
   //   }
   //   return false;
   // }
+
   return (
+    
     <div className="App" style={{borderLeft: "8px solid #a19810", borderRight: "8px solid #a19810"}}>
       <HashRouter>
       <ScrollToTop/>
@@ -39,13 +42,14 @@ function App() {
           <Route path="/profile" element={<Profile/>}/>
 
           <Route path="/slide" element={<SlideShow/>}/>
-          {/* <Route path="/admin/dashboard" element={() => (isLoggedIn() ? <Redirect to="/login" /> : <Dashboard />)} /> */}
+          {/* <Route path="/admin/dashboard" element={() => (isLoggedIn() ? <Navigate to="/login" state={{from: location}}  replace /> : <Dashboard />)} /> */}
           <Route path="/admin/dashboard" exact element={<Dashboard/>}/>
           <Route path="/admin/slides" element={<Slides/>}/>
           <Route path="/admin/profile" element={<Profiles/>}/>
           <Route path="/admin/news" element={<New/>}/>
           <Route path="/admin/logout" element={<Logout/>}/>
           <Route path="/admin/login" element={<Login/>}/>
+          <Route path="/admin/register" element={<Register/>}/>
         </Routes>
       </HashRouter>
       

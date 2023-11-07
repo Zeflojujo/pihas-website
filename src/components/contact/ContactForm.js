@@ -1,8 +1,42 @@
 import "./ContactFormStyles.css";
 import "./AboutUsStyles.css";
 import { CiLocationOn } from 'react-icons/ci';
+import { useState } from "react";
+import axios from 'axios';
 
 function ContactForm () {
+
+    const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [msg, setMsg] = useState("");
+
+  const handleContactMessage = async (e) => {
+    e.preventDefault();
+    const contactMessage = {
+         name,
+         email,
+         phone,
+         msg
+    }
+
+    console.log(email, name, phone, msg)
+
+    await axios.post('http://localhost:8000/admin/message', contactMessage).then((response) => {
+        console.log(response);
+        alert("Message sent successfully");
+
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMsg("");
+    }).catch((error) => {
+        alert("Message send error", error);
+        console.log("Message send failed", error);
+    })
+    
+  }
+
     return (
         <>
         <div className="main-container">
@@ -19,18 +53,51 @@ function ContactForm () {
                     <h3 className="head" style={{display: "flex", justifyContent: "center", alignContent: "center", margin: "auto", marginBottom: "1.7rem", color: "#a19810"}}>MESSAGE TO PIHAS COLLEGE</h3>
 
                     <form>
-                        <span>Name:</span>
-                        <input placeholder="Name"/>
+                        <label htmlFor="name">Name:</label>
+                        <input
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter Name..."
+                            required
+                         />
 
-                        <span>Email:</span>
-                        <input placeholder="Email"/>
+                        <label htmlFor="email">Email:</label>
+                        <input 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            type="text"
+                            id="email"
+                            name="email"
+                            placeholder="Enter Email..."
+                            required
+                        />
 
-                        <span>Phone:</span>
-                        <input placeholder="Phone"/>
+                        <label htmlFor="phone">Phone:</label>
+                        <input 
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            type="text"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter Phone..."
+                            required
+                        />
 
-                        <span>Message:</span>
-                        <textarea placeholder="message" rows={4}></textarea>
-                        <button>Send Message</button>
+                        <label htmlFor="msg">Message:</label>
+                        <textarea 
+                            value={msg}
+                            onChange={(e) => setMsg(e.target.value)}
+                            type="text"
+                            id="msg"
+                            name="msg"
+                            placeholder="Enter Message..."
+                            required
+                            rows={4}
+                        ></textarea>
+                        <button onClick={(e) => handleContactMessage(e)}>Send Message</button>
                     </form>
 
                 </div>

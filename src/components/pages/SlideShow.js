@@ -65,37 +65,37 @@ function SlideShow() {
   return (
     <div className="max-w-[100%] h-[560px] w-full m-auto py-2 pb-2 sm:px-0  relative group">
 
-        <div style={{backgroundImage: `url(${slides[currentIndex].url})`, backgroundSize:"cover", backgroundRepeat: "no-repeat", resize:"contain"}} className="absolute justify-center items-center w-full h-full rounded-2xl bg-center duration-700 transition-all">
-          <div className="absolute justify-center items-center md:w-[60%] lg:w-[40%] top-[40%] lg:ml-[30%]  md:ml-[20%] ml-[13%] mr-[5%] sm:ml-[5%]  duration-300 animate-bounce">
+        <div style={{backgroundImage: `url(${slides[currentIndex].url})`, backgroundSize:"cover", backgroundRepeat: "no-repeat", resize:"contain"}} className="absolute flex justify-center items-center m-auto w-full h-full rounded-2xl bg-center duration-700 transition-all">
+          <div className="absolute p-0 flex justify-center items-center m-auto  duration-300 animate-bounce">
             {
               currentIndex===0?
-                <div className="rounded-md" style={{backgroundColor: 'white', padding: 16}}>
+                <div className="rounded-md px-1 py-3 mx-2" style={{backgroundColor: 'white'}}>
                   <h2 className="font-semibold text-center lg:text-3xl md:text-2xl sm:text-2xl text-2xl" style={{ color: "#a19810"}}>PIHAS BUILDING</h2>
                   <p className="font-semibold mt-3 text-center lg:text-2xl md:text-1xl">Pihas Administration Block where the Pihas Student are registered</p>
                 </div>
                 : currentIndex===1?
-                  <div className="rounded-md" style={{backgroundColor: 'white', padding: 16}}>
+                  <div className="rounded-md px-1 py-3 mx-2" style={{backgroundColor: 'white'}}>
                     <h2 className="font-semibold text-center lg:text-3xl md:text-2xl sm:text-2xl text-2xl" style={{ color: "#a19810"}}>PIHAS LIBRARY</h2>
                     <p className="font-semibold mt-3 text-center lg:text-2xl md:text-1xl">Pihas Administration Block</p>
                   </div>
                   :currentIndex===2?
-                    <div className="rounded-md overflow:hidden" style={{backgroundColor: 'white', padding: 16}}>
+                    <div className="rounded-md overflow:hidden px-1 py-3 mx-2" style={{backgroundColor: 'white'}}>
                       <h2 className="font-semibold text-center lg:text-3xl md:text-2xl sm:text-2xl text-2xl" style={{ color: "#a19810"}}>PIHAS - PHARMACY LABORATORY</h2>
                       <p className="font-semibold mt-3 text-center lg:text-2xl md:text-1xl">Student practices their studies at Pharmaceautical pihas laboratory</p>
                     </div>
                     :currentIndex===3?
-                      <div className="rounded-md" style={{backgroundColor: 'white', padding: 16}}>
+                      <div className="rounded-md px-1 py-3 mx-2" style={{backgroundColor: 'white'}}>
                         <h1 className="font-semibold text-center lg:text-3xl md:text-2xl sm:text-2xl text-2xl" style={{ color: "#a19810"}}>PIHAS - GRADUATION DAY</h1>
                         <p className="font-semibold mt-3 text-center text-1xl lg:text-2xl md:text-1xl">Student during graduation ceremony</p>
                       </div>
                       
                       : currentIndex===4?
-                        <div className="rounded-md" style={{backgroundColor: 'white', padding: 16}}>
+                        <div className="rounded-md px-1 py-3 mx-2" style={{backgroundColor: 'white'}}>
                           <h2 className="font-semibold text-center lg:text-3xl md:text-2xl sm:text-2xl text-2xl" style={{ color: "#a19810"}}>PIHAS LIBRARY</h2>
                           <p className="font-semibold mt-3 text-center lg:text-2xl md:text-1xl">Pihas Student when they are in Library for self studies</p>
                         </div>
                         :currentIndex===5?
-                          <div className="rounded-md" style={{backgroundColor: 'white', padding: 16}}>
+                          <div className="rounded-md px-1 py-3 mx-2" style={{backgroundColor: 'white'}}>
                             <h2 className="font-semibold text-center lg:text-3xl md:text-2xl sm:text-2xl text-2xl" style={{ color: "#a19810"}}>PIHAS LIBRARY</h2>
                             <p className="font-semibold mt-3 text-center lg:text-2xl md:text-1xl">Pihas Student when they are in Library for self studies</p>
                           </div>

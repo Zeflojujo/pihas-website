@@ -22,7 +22,7 @@ function Headers() {
         </div>
         <div className="header4_logo2">
           <h1 style={{fontFamily: ""}}>PERAMIHO COLLEGE OF HEALTH AND ALLIED SCIENCES</h1>
-          <span style={{ clear: "both" }}>HEALTHY IS WEALTH</span>
+          <span style={{ clear: "both" }}>FROM THE PEOPLE FOR THE PEOPLE</span>
           <div className="header4_links">
             <a
               href="https://saristz.ac.tz/login/kam"

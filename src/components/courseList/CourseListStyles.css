@@ -217,7 +217,7 @@
 @media screen and (max-width: 1010px) {
   .photo_gallery1_div1 {
     margin: 1% 0% 1% 2.2%;
-    width: 30.7%;
+    max-width: 47%;
   }
 }
 
@@ -227,6 +227,7 @@
   }
   .photo_gallery1_div1 {
     padding: 40px 1px 40px 2px;
+    max-width: 47%;
   }
   .photo_gallery1_div1 h2 i {
     font-size: 3.2vw;
@@ -329,6 +330,11 @@
   }
   .photo_gallery1_div1 p {
     font-size: 3.2vw;
+  }
+
+  .photo_gallery1_list1{
+    display: flex;
+    flex-direction: column;
   }
 }
 

@@ -6,7 +6,7 @@ function VideoGallery() {
         <div style={{clear:"both"}} id="video_gallery1_div">
             <div className="video_gallery1_heading">
                 <h2 className="video_gallery1_h2h" style={{fontSize: "24px"}}>PIHAS COLLEGE VIDEO GALLARY</h2>
-                <p className="video_gallery1_h2h2">Healthy is Wealth</p>
+                <p className="video_gallery1_h2h2">From the people for the people</p>
             </div>
             <div className="video_gallery1_list1">
                 <div className="video_gallery1_g video-responsive">

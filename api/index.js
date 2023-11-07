@@ -35,6 +35,7 @@ app.listen(port, () => {
 
 
 const User = require("./models/User");
+const Message = require("./models/Message");
 // const News = require("./models/Slides");
 
 //function to send verification Email to the user
@@ -68,17 +69,17 @@ const sendVerificationEmail = async(email,verificationToken) => {
 }
 
 //endpoint to register in the app
-app.post("/admin/login", async(req,res) => {
+app.post("/admin/register", async(req,res) => {
     try{
       console.log("am here");
         const {name, email, password} = req.body;
 
         //check if the email is already registered
-        const existingUser = await User.findOne({email});
+        // const existingUser = await User.findOne({email});
 
-        if(existingUser){
-            return res.status(400).json({message: "Email already registered"});
-        }
+        // if(existingUser){
+        //     return res.status(400).json({message: "Email already registered"});
+        // }
 
         //create a new User
         const newUser = new User({name, email, password});
@@ -98,11 +99,32 @@ app.post("/admin/login", async(req,res) => {
     }
 })
 
+//endpoint to register in the app
+app.post("/admin/message", async(req,res) => {
+  try{
+    console.log("am here");
+      const {name, email, phone, msg} = req.body;
+
+      //create a new Message
+      const newUser = new Message({name, email, phone, msg});
+
+      //save the user to the database
+      await Message.save();
+
+
+  }catch(error){
+      console.log("error sending message", error);
+      res.status(500).json({message: "Message failed" })
+  }
+})
+
 //endpoint to login to the app
 app.post("/admin/login", async(req,res) => {
   try{
     console.log("am here");
       const { email, password} = req.body;
+
+      console.log(email, password);
 
       //check if the email is already registered
       const existingUser = await User.findOne({email});
@@ -115,17 +137,9 @@ app.post("/admin/login", async(req,res) => {
         return res.status(400).json({message: "Invalid password"});
       }
 
+      localStorage.setItem(crypto.randomBytes(32).toString('hex'));
 
-
-      //create a new User
-      const newUser = new User({ email, password});
-
-      //generate and store the verification token
-      newUser.verificationToken = crypto.randomBytes(20).toString('hex');
-
-      //save the user to the database
-      await User.save();
-
+      window.location('/admin/dashboard');
 
   }catch(error){
       console.log("error login user", error);

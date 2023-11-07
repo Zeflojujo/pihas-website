@@ -2,28 +2,31 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const Login = () => {
+const Register = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLoginUser = async (e) => {
     e.preventDefault();
     const admin = {
+         name,
          email,
          password
     }
 
     console.log(email, password)
 
-    await axios.post('http://localhost:8000/admin/login', admin).then((response) => {
+    await axios.post('http://localhost:8000/admin/register', admin).then((response) => {
         console.log(response);
-        alert("Login successfully");
+        alert("Registered successfully");
 
+        setName("");
         setEmail("");
         setPassword("");
     }).catch((error) => {
-        alert("login error", error);
-        console.log("login failed", error);
+        alert("register error", error);
+        console.log("register failed", error);
     })
 
     //send a post request to the backend AP
@@ -33,14 +36,29 @@ const Login = () => {
   return (
     <div className="flex justify-center items-center h-screen bg-blue-50">
       <div className="w-96 p-6 m-3 shadow-lg bg-white rounded-md text-gray-900">
-        <h1 className="text-3xl text-center font-semibold">Admin Login </h1>
+        <h1 className="text-3xl text-center font-semibold">Admin Registration </h1>
         <hr className="mt-3" />
 
         <form>
 
+        <div className="mt-3">
+            <label htmlFor="name" className="block text-base mb-2">
+              Name
+            </label>
+            <input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              type="text"
+              id="name"
+              className="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
+              placeholder="Enter Name..."
+              required
+            />
+          </div>
+
           <div className="mt-3">
             <label htmlFor="username" className="block text-base mb-2">
-              Username
+              Email
             </label>
             <input
               value={email}
@@ -83,7 +101,7 @@ const Login = () => {
 
           <div className="w-full mt-3">
             <button onClick={(e) => handleLoginUser(e)} className="border-2 border-[#a19810] bg-[#a19810] text-white py-1 w-full rounded-md hover:bg-transparent hover:text-[#a19810] font-semibold">
-              Login
+              Register
             </button>
           </div>
         </form>
@@ -93,4 +111,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
