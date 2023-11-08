@@ -87,26 +87,21 @@ const Register = () => {
             />
           </div>
 
-          <div className="flex items-center  justify-between mt-3">
-            <div className="flex gap-1">
-              <input type="checkbox" />
-              <label>Remember Me</label>
-            </div>
-            <div>
-              <Link className="text-[#a19810] font-semibold" to={"/"}>
-                Forgot Password?
-              </Link>
-            </div>
-          </div>
-
           <div className="w-full mt-3">
-            <button onClick={(e) => handleLoginUser(e)} className="border-2 border-[#a19810] bg-[#a19810] text-white py-1 w-full rounded-md hover:bg-transparent hover:text-[#a19810] font-semibold">
+            <button onClick={(e) => handleLoginUser(e)} className="border-2 border-[#a19810] bg-[#a19810] text-white py-1 w-full rounded-md active:bg-[#b0a946] font-semibold">
               Register
             </button>
           </div>
         </form>
 
-      </div>
+        <div className="flex items-center  justify-center mt-3">
+            <Link className="text-gray-500 font-semibold" to={"/admin/login"}>
+              Already have an account? <label className="text-blue-400 cursor-pointer">Sign In</label>
+            </Link>
+        </div>
+        
+        </div>
+
     </div>
   );
 };

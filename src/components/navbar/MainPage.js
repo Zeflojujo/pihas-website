@@ -46,10 +46,10 @@ function MainPage() {
             </button>
             <div className="dropdownheader4-content">
               <NavLink to={"/profile"} style={{ lineHeight: 1 }}>
-                Pihas Profile
+                Background
               </NavLink>
               <NavLink to={"/about"} style={{ lineHeight: "1" }}>
-                Mission, Vision & Objectives
+                Mission & Vision
               </NavLink>
             </div>
           </div>

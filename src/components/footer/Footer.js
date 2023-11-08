@@ -28,13 +28,13 @@ function Footer() {
                         </div>
 
                     </div>
-                    <div className="footer3">
+                    <div className="footer3 flex-col hover:text-green-800 ">
                         <h2 className="c1">QUICK LINKS</h2>
                         <table style={{clear:"both"}}>
                             <tbody>
                                 <tr>
                                     <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true" style={{color:"#ffff00"}}></i></td>
-                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <Link className="hyp" to="/">Home</Link></td>
+                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}><a className="hyp" href='https://www.nactvet.go.tz/'>Nactvet</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -42,7 +42,7 @@ function Footer() {
                             <tbody>
                                 <tr>
                                     <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true" style={{color:"#ffff00"}}></i></td>
-                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <Link className="hyp" to="/news">News and Events</Link></td>
+                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <a className="hyp" href='https://www.moh.go.tz/'>Ministry Of Health</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -50,7 +50,7 @@ function Footer() {
                             <tbody>
                                 <tr>
                                     <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true" style={{color:"#ffff00"}}></i></td>
-                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <Link className="hyp" to="/about">About Us</Link></td>
+                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <a className="hyp" href='https://www.moe.go.tz/en'>Ministry Of Education</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -58,7 +58,16 @@ function Footer() {
                             <tbody>
                                 <tr>
                                     <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true" style={{color:"#ffff00"}}></i></td>
-                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <Link className="hyp" to="/contact">Contact Us</Link></td>
+                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}><a className="hyp" href='https://www.mct.go.tz/'>Medical Council Of Tanzania</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table style={{clear:"both"}}>
+                            <tbody>
+                                <tr>
+                                    <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true" style={{color:"#ffff00"}}></i></td>
+                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}><a className="hyp" href='https://www.pc.go.tz/'> Pharmacy Council</a></td>
                                 </tr>
                             </tbody>
                         </table>
