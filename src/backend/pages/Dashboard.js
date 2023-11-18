@@ -1,13 +1,15 @@
 import React from 'react';
-import SideBar from '../components/SideBar'
+import SideBar from '../components/layouts/SideBar'
+import NavBar from '../components/layouts/NavBar';
 
 const Dashboard = () => {
   return (
-    <div className='flex gap-6'>
+    <div className='flex '>
       <SideBar />
-      <div className='m-3 text-xl text-gray-900 font-semibold'>
+      <NavBar />
+      {/* <div className='gap-6 m-3 top-[100px] text-xl text-gray-900 font-semibold'>
         <h2>This is dashboard</h2>
-      </div>
+      </div> */}
     </div>
   )
 }

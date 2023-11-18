@@ -13,20 +13,14 @@ import Profile from "./components/pages/Profile";
 import SlideShow from "./components/pages/SlideShow";
 import Dashboard from "./backend/pages/Dashboard";
 import New from "./backend/pages/New";
-import Slides from "./backend/pages/Slides";
 import Logout from "./backend/pages/logout";
 import Profiles from "./backend/pages/Profiles";
 import Login from "./backend/pages/Login";
 import ScrollToTop from "./components/ScrollToTop";
 import Register from "./backend/pages/Register";
+import Messages from "./backend/pages/ContactMessage";
 
 function App() {
-  // function isLoggedIn() {
-  //   if (!localStorage.getItem('token')) {
-  //     return true;
-  //   }
-  //   return false;
-  // }
 
   return (
     
@@ -44,11 +38,11 @@ function App() {
           <Route path="/slide" element={<SlideShow/>}/>
           {/* <Route path="/admin/dashboard" element={() => (isLoggedIn() ? <Navigate to="/login" state={{from: location}}  replace /> : <Dashboard />)} /> */}
           <Route path="/admin/dashboard" exact element={<Dashboard/>}/>
-          <Route path="/admin/slides" element={<Slides/>}/>
+          <Route path="/admin/contact-messages" element={<Messages/>}/>
           <Route path="/admin/profile" element={<Profiles/>}/>
           <Route path="/admin/news" element={<New/>}/>
           <Route path="/admin/logout" element={<Logout/>}/>
-          <Route path="/admin/login" element={<Login/>}/>
+          <Route path="/admin/auth" element={<Login/>}/>
           <Route path="/admin/register" element={<Register/>}/>
         </Routes>
       </HashRouter>

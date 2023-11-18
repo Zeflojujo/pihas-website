@@ -76,7 +76,7 @@ function Footer() {
                             <tbody>
                                 <tr>
                                     <td style={{textAlign:"center", padding:"4px 0 4px 0"}}><i className="fa fa-arrow-circle-o-right" aria-hidden="true" style={{color:"#ffff00"}}></i></td>
-                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <Link className="hyp" to="/admin/login">Sign In</Link></td>
+                                    <td style={{padding:"4px 0 4px 4px", fontSize:"16px"}}> <Link className="hyp" to="/admin/auth">Sign In</Link></td>
                                 </tr>
                             </tbody>
                         </table>

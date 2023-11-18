@@ -11,17 +11,16 @@ const SideBar = () => {
     { name: "dashboard", link: "/admin/dashboard", icon: MdOutlineDashboard },
     { name: "news", link: "/admin/news", icon: FiMessageSquare },
     { name: "profile", link: "/admin/profile", icon: AiOutlineUser },
-    { name: "slides", link: "/admin/slides", icon: FiFolder },
-    { name: "logout", link: "/admin/logout" },
+    { name: "Messages", link: "/admin/contact-messages", icon: FiFolder },
   ];
 
   const [open, setOpen] = useState(true);
   return (
     <section>
       <div
-        className={`bg-[#a19810] min-h-screen ${
-          open ? "w-72" : "w-16"
-        } duration-500 text-gray-100 px-4`}
+        className={` bg-[#a19810] min-h-screen ${
+          open ? "w-60" : "w-16"
+        } duration-500 w text-gray-100 px-4`}
       >
         <div className="py-3 flex justify-end">
           <HiMenuAlt3
@@ -137,33 +136,6 @@ group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
                 group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
             >
               {menus[3].name}
-            </h2>
-          </NavLink>
-
-          <NavLink
-            to={menus[4].link}
-            // key={i}
-            className="flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-[#7b773b] rounded-md group mt-16"
-          >
-            <div>{React.createElement(FiFolder, { size: "20" })}</div>
-            <h2
-              style={{
-                transitionDelay: `${3 + 1}00ms`,
-              }}
-              className={`whitespace-pre duration-500 ${
-                !open && "opacity-0 translate-x-28 overflow-hidden"
-              }`}
-            >
-              {menus[4].name}
-            </h2>
-            <h2
-              className={`${
-                open && "hidden"
-              } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 
-                rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 
-                group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
-            >
-              {menus[4].name}
             </h2>
           </NavLink>
           {/* ))}  */}

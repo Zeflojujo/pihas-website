@@ -22,18 +22,27 @@ function ContactForm () {
 
     console.log(email, name, phone, msg)
 
-    await axios.post('http://localhost:8000/admin/message', contactMessage).then((response) => {
-        console.log(response);
-        alert("Message sent successfully");
+    try{
+        await axios.post('http://127.0.0.1:3500/messages', contactMessage)
+        .then((response) => {
 
-        setName("");
-        setEmail("");
-        setPhone("");
-        setMsg("");
-    }).catch((error) => {
-        alert("Message send error", error);
-        console.log("Message send failed", error);
-    })
+            console.log(response);
+            alert("Message sent successfully");
+    
+            setName("");
+            setEmail("");
+            setPhone("");
+            setMsg("");
+        })
+        .catch((error) => {
+            alert("Message send error", error);
+            console.log(error.response.data.message);
+        })
+    }catch(err){
+        console.log(err)
+    }
+
+    
     
   }
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import {BsChevronCompactLeft, BsChevronCompactRight} from "react-icons/bs"
+import {BsChevronCompactLeft, BsChevronCompactRight} from "react-icons/bs";
+import loading from '../../assets/100/slider/loading.gif';
 
 function SlideShow() {
   const slides = [
@@ -63,6 +64,8 @@ function SlideShow() {
 
 
   return (
+
+  
     <div className="max-w-[100%] h-[560px] w-full m-auto py-2 pb-2 sm:px-0  relative group">
 
         <div style={{backgroundImage: `url(${slides[currentIndex].url})`, backgroundSize:"cover",fontFamily:"times", backgroundRepeat: "no-repeat", resize:"contain"}} className="absolute flex justify-center text-gray-700 items-center m-auto w-full h-full rounded-2xl bg-center duration-700 transition-all">
