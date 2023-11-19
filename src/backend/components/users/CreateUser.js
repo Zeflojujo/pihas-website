@@ -105,7 +105,7 @@ const CreateUser = () => {
 
     try{
 
-    await axios.post('https://pihas-website.on.fleek.co/users', admin)
+    await axios.post('https://pihas-website.on.fleek.co/#/users', admin)
       .then((response) => {
           alert("Admin Registered successfully");
 
@@ -164,7 +164,7 @@ const CreateUser = () => {
     async function fetchData() {
       try{
 
-        await axios.get('http://localhost:3500/users')
+        await axios.get('https://pihas-website.on.fleek.co/user')
           .then((response) => {
             console.log("object", response.data);
             setUserData(response.data)
