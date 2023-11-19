@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import CreateNewsModal from './CreateNewsModal';
+import DeleteModal from '../layouts/DeleteModal';
 import * as Yup from 'yup';
 // import './styles.css'; // Import your CSS file with Tailwind CSS styles
 
@@ -17,14 +18,51 @@ const CreateUser = () => {
   const [hoveredRow, setHoveredRow] = useState(null);
   const [isModalOpen, setModalOpen] = useState(false);
   const [userData, setUserData] = useState([]);
+  const [userId, setUserId] = useState(null);
   const [hasSuccess, setHasSuccess] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [isPopupOpen, setPopupOpen] = useState(false);
+  const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
+
+  const handleDelete = () => {
+    // Handle the delete action here
+    deleteUserHandler(userId);
+    setDeleteModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setDeleteModalOpen(false);
+  };
+  const DeleteModal = (id) => {
+    setUserId(id)
+    setDeleteModalOpen(true)
+  };
+
 
   const closePopup = () => {
     setPopupOpen(false);
+  };
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const handleMouseEnter = (rowIndex) => {
+    setHoveredRow(rowIndex);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredRow(null);
+  };
+
+  const handleCloseModal = () => {
+    closeModal();
   };
 
 
@@ -62,16 +100,12 @@ const CreateUser = () => {
     }
   };
 
-
-
-
-
     const handleCreateUser = async (e) => {
     const admin = formData;
 
     try{
 
-    await axios.post('http://localhost:3500/users', admin)
+    await axios.post('https://pihas-website.on.fleek.co/users', admin)
       .then((response) => {
           alert("Admin Registered successfully");
 
@@ -106,35 +140,12 @@ const CreateUser = () => {
   }
 
 
-
-
-
-
-  const openModal = () => {
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
-  const handleMouseEnter = (rowIndex) => {
-    setHoveredRow(rowIndex);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredRow(null);
-  };
-
-  const handleCloseModal = () => {
-    closeModal();
-  };
-
   const deleteUserHandler = async(id) => {
     console.log(id);
 
     await axios.delete(`http://localhost:3500/users/${id}`)
     .then((response) => {
+      setDeleteModalOpen(true);
       alert('user deleted successfully')
       setSuccessMessage("Admin deleted successfuly!")
       setHasSuccess(true);
@@ -199,7 +210,7 @@ const CreateUser = () => {
             </button>
             {/* Success Message */}
             <p className="text-green-500 text-lg font-semibold">
-              Success! Your action was successful.
+              {successMessage}
             </p>
           </div>
         </div>
@@ -209,7 +220,11 @@ const CreateUser = () => {
       }
       <div className="relative p-4">
 
-      
+      <DeleteModal
+        isOpen={isDeleteModalOpen}
+        onCancel={handleCancel}
+        onDelete={handleDelete}
+      />
 
       {/* <CreateNewsModal showModal={isModalOpen} closeModal={closeModal} /> */}
       <div className='relative float-right width-auto shadow-lg'>
@@ -244,7 +259,7 @@ const CreateUser = () => {
                 <td className={`py-2 px-4 font-bold w-40 text-blue-500 hover:underline text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{index+101}</td>
                 <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.username}</td>
                 <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.password}</td>
-                <td className={`py-2 px-4 text-gray-700 text-base border-b  ${hoveredRow === index ? 'bg-gray-200' : ''}`}><button onClick={() => deleteUserHandler(item.id)} className='border border-solid bg-red-400 hover:bg-red-500 active:bg-red-400 px-3 py-1 border-r-2 text-white'>Delete</button></td>
+                <td className={`py-2 px-4 text-gray-700 text-base border-b  ${hoveredRow === index ? 'bg-gray-200' : ''}`}><button onClick={() => DeleteModal(item.id) } className='border border-solid bg-red-400 hover:bg-red-500 active:bg-red-400 px-3 py-1 border-r-2 text-white'>Delete</button></td>
                 <td className={`py-2 px-4 text-gray-700 text-base border-b  ${hoveredRow === index ? 'bg-gray-200' : ''}`}><button className='border border-solid bg-cyan-400 hover:bg-cyan-600 active:bg-cyan-400 px-3 py-1 border-r-2 text-white'>Update</button></td>
               </tr>
             ))}
