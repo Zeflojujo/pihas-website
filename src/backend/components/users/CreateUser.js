@@ -143,7 +143,7 @@ const CreateUser = () => {
   const deleteUserHandler = async(id) => {
     console.log(id);
 
-    await axios.delete(`http://localhost:3500/users/${id}`)
+    await axios.delete(`https://pihas-website.on.fleek.co/users/${id}`)
     .then((response) => {
       setDeleteModalOpen(true);
       alert('user deleted successfully')
