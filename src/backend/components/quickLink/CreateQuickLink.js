@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import swal from 'sweetalert';
-// import CreateNewsModal from './CreateNewsModal';
 import * as Yup from 'yup';
 // import './styles.css'; // Import your CSS file with Tailwind CSS styles
 
 import axios from "../../../api/axios";
 
-const NEWS_URL = 'http://localhost:3500/news';
+const NEWS_URL = 'http://localhost:3500/quickLink';
 
 
 const validationSchema = Yup.object().shape({
-  title: Yup.string().required('Title is required'),
-  description: Yup.string().required('Description is required'),
+  name: Yup.string().required('name is required'),
+  link: Yup.string().required('link is required'),
 });
 
-const NewsListTable = () => {
+const CreateQuickLink = () => {
   const [hoveredRow, setHoveredRow] = useState(null);
   const [isModalOpen, setModalOpen] = useState(false);
   const [newsData, setNewsData] = useState([]);
@@ -41,8 +40,8 @@ const NewsListTable = () => {
   };
 
   const [formData, setFormData] = useState({
-    title: '',
-    description: '',
+    name: '',
+    link: '',
   });
 
   const [errors, setErrors] = useState({});
@@ -94,26 +93,22 @@ const NewsListTable = () => {
     })
     .then(async (willDelete) => {
       if (willDelete) {
-        
-        await axios.delete(`http://localhost:3500/news/${id}`)
+        swal("Poof! Your imaginary file has been deleted!", {
+          icon: "success",
+        });
+        await axios.delete(`http://localhost:3500/quickLink/${id}`)
         .then((response) => {
           console.log('item deleted successfully');
-          swal("Poof! Your imaginary file has been deleted!", {
-            icon: "success",
-          });
           setFormData({
-            title: '',
-            description: '',
+            name: '',
+            link: '',
           });
         })
         .catch((err) => {
           console.log(err.message)
-          swal(err.response.data.message, {
-            icon: "warning",
-          });
         })
       } else {
-        swal("Your imaginary file is safe!",{
+        swal("Your imaginary file is safe!", {
           icon: 'info'
         });
       }
@@ -128,31 +123,23 @@ const NewsListTable = () => {
 
     try{
 
-    await axios.post('http://localhost:3500/news', News)
+    await axios.post('http://localhost:3500/quickLink', News)
       .then((response) => {
           console.log(response);
           console.log(response.data);
           swal({
             title: "Good job!",
-            text: "News Created successfully!",
+            text: "Quick Link is Created successfully!",
             icon: "success",
             button: "Aww yess!",
           });
-
           setFormData({
-            title: '',
-            description: '',
+            name: '',
+            link: '',
           });
           // navigate('/admin/dashboard');
       }).catch((error) => {
-          // alert("news error", error.message);
-          swal({
-            title: "Net-Connection Error!",
-            text: "News fetching error!",
-            icon: "warning",
-            button: true,
-            dangerMode: true,
-          });
+          alert("news error", error.message);
           console.log("news failed", error.message);
       })
 
@@ -182,7 +169,14 @@ const NewsListTable = () => {
             console.log(response.data);
             setNewsData(response.data);
           }).catch((error) => {
-              alert("news error", error.message);
+              // alert("Quick Link error", error.message);
+              swal({
+                title: "Net-Connection Error!",
+                text: "Quick Link fetching error!",
+                icon: "warning",
+                button: true,
+                dangerMode: true,
+              });
               console.log("news failed", error.message);
           })
     
@@ -206,6 +200,9 @@ const NewsListTable = () => {
 
       <div className="p-4">
 
+      
+
+      {/* <CreateNewsModal showModal={isModalOpen} closeModal={closeModal} /> */}
       <div className='relative float-right'>
           <button onClick={openModal} className="bg-[#a19810] text-lg text-white py-2 px-4 rounded">
             Add News
@@ -221,8 +218,8 @@ const NewsListTable = () => {
           <thead className='bg-gray-50 border-b-2 border-gray-200'>
             <tr>
               <th className="py-2 px-4 border-b text-start">ID</th>
-              <th className="py-2 px-4 border-b text-start ">Title</th>
-              <th className="py-2 px-4 border-b text-start">Description</th>
+              <th className="py-2 px-4 border-b text-start ">name</th>
+              <th className="py-2 px-4 border-b text-start">link</th>
               <th className="py-2 px-4 border-b text-start"></th>
               <th className="py-2 px-4 border-b text-start"></th>
             </tr>
@@ -235,8 +232,8 @@ const NewsListTable = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{index+1}</td>
-                <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.title}</td>
-                <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.description}</td>
+                <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.name}</td>
+                <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.link}</td>
                 <td className={`w-20 py-2 px-4 text-gray-700 text-base border-b  ${hoveredRow === index ? 'bg-gray-200' : ''}`}><button onClick={() => deleteNewsHandler(item.id)} className='border border-solid bg-red-400 hover:bg-red-500 active:bg-red-400 px-3 py-1 border-r-2 text-white'>Delete</button></td>
                 <td className={`w-20 py-2 px-4 text-gray-700 text-base border-b  ${hoveredRow === index ? 'bg-gray-200' : ''}`}><button onClick={() => UpdataNewsHandler(item.id)} className='border border-solid bg-cyan-400 hover:bg-cyan-600 active:bg-cyan-400 px-3 py-1 border-r-2 text-white'>Update</button></td>
               </tr>
@@ -273,37 +270,37 @@ const NewsListTable = () => {
             </svg>
           </button>
         </div>
-          <h2 className="text-2xl font-semibold mb-4">CREATE NEWS</h2>
+          <h2 className="text-2xl font-semibold mb-4">CREATE QUICK LINK</h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label htmlFor="title" className="block text-gray-700 font-semibold mb-2">
-                Title
+              <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
+                Name
               </label>
               <input
                 type="text"
-                id="title"
-                name="title"
-                placeholder='Enter your title'
-                value={formData.title}
+                id="name"
+                name="name"
+                placeholder='Enter your name'
+                value={formData.name}
                 onChange={handleChange}
-                className={`w-full border font-normal text-base ${errors.title ? 'border-red-500' : 'border-gray-300'} p-2 rounded`}
+                className={`w-full border font-normal text-base ${errors.name ? 'border-red-500' : 'border-gray-300'} p-2 rounded`}
               />
-              {errors.title && <p className="text-red-500 text-sm mt-1">{errors.title}</p>}
+              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
             </div>
             <div className="mb-4">
-              <label htmlFor="description" className="block text-gray-700 font-semibold mb-2">
-                Description
+              <label htmlFor="link" className="block text-gray-700 font-semibold mb-2">
+                Link
               </label>
               <textarea
-                id="description"
-                name="description"
+                id="link"
+                name="link"
                 placeholder='describe here...'
-                value={formData.description}
+                value={formData.link}
                 onChange={handleChange}
-                className={`w-full border font-normal text-base ${errors.description ? 'border-red-500' : 'border-gray-300'} p-2 rounded`}
+                className={`w-full border font-normal text-base ${errors.link ? 'border-red-500' : 'border-gray-300'} p-2 rounded`}
                 rows="4"
               />
-              {errors.description && <p className="text-red-500 text-sm mt-1">{errors.description}</p>}
+              {errors.link && <p className="text-red-500 text-sm mt-1">{errors.link}</p>}
             </div>
             <button type="submit" className="bg-[#a19810] text-white px-4 py-2 rounded w-full">
               Submit
@@ -318,4 +315,4 @@ const NewsListTable = () => {
   );
 };
 
-export default NewsListTable;
+export default CreateQuickLink;

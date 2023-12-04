@@ -1,22 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import * as Yup from 'yup';
-// import './styles.css'; // Import your CSS file with Tailwind CSS styles
+import swal from 'sweetalert';
 
 import axios from "../../../api/axios";
 
-const NEWS_URL = 'http://localhost:3500/messages';
-
-
-const validationSchema = Yup.object().shape({
-  title: Yup.string().required('Title is required'),
-  description: Yup.string().required('Description is required'),
-});
+const MESSAGE_URL = 'http://localhost:3500/messages';
 
 const Messages = () => {
   const [hoveredRow, setHoveredRow] = useState(null);
-  const [newsData, setNewsData] = useState([]);
-  const [successMessage, setSuccessMessage] = useState(false);
-
+  const [MessageData, setMessageData] = useState([]);
 
 
   const handleMouseEnter = (rowIndex) => {
@@ -27,11 +18,36 @@ const Messages = () => {
     setHoveredRow(null);
   };
 
+  const deleteMessageHandler = async(id) => {
+    console.log(id)
 
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this imaginary file!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then(async (willDelete) => {
+      if (willDelete) {
+        swal("Poof! Your imaginary file has been deleted!", {
+          icon: "success",
+        });
+        await axios.delete(`http://localhost:3500/messages/${id}`)
+        .then((response) => {
+          console.log('item deleted successfully');
+        })
+        .catch((err) => {
+          console.log(err.message)
+    })
+      } else {
+        swal("Your imaginary file is safe!", {
+          icon: 'info'
+        });
+      }
+    });
 
-
-  const [errors, setErrors] = useState({});
-
+   }
 
 
   useEffect(() => {
@@ -39,13 +55,20 @@ const Messages = () => {
     async function fetchData() {
       try{
 
-        await axios.get(NEWS_URL)
+        await axios.get(MESSAGE_URL)
           .then((response) => {
             console.log(response.data);
-            setNewsData(response.data);
+            setMessageData(response.data);
           }).catch((error) => {
-              alert("news error", error.message);
-              console.log("news failed", error.message);
+              // alert("Message error", error.message);
+              swal({
+                title: "Net-Connection Error!",
+                text: "Message fetching error!",
+                icon: "warning",
+                button: true,
+                dangerMode: true,
+              });
+              console.log("message fetch error", error.message);
           })
     
         }catch(err){
@@ -86,7 +109,7 @@ const Messages = () => {
                 </tr>
             </thead>
             <tbody>
-                {newsData.map((item, index) => (
+                {MessageData.map((item, index) => (
                 <tr
                     key={index}
                     onMouseEnter={() => handleMouseEnter(index)}
@@ -97,7 +120,7 @@ const Messages = () => {
                     <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.email}</td>
                     <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.phone}</td>
                     <td className={`py-2 px-4 text-gray-700 text-base border-b whitesapce-pre-line ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.message}</td>
-                    <td className={`py-2 px-4 text-gray-700 text-base border-b  ${hoveredRow === index ? 'bg-gray-200' : ''}`}><button className='border border-solid bg-red-400 hover:bg-red-500 active:bg-red-400 px-3 py-1 border-r-2 text-white'>Delete</button></td>
+                    <td className={`py-2 px-4 text-gray-700 text-base border-b  ${hoveredRow === index ? 'bg-gray-200' : ''}`}><button onClick={() => deleteMessageHandler(item.id)} className='border border-solid bg-red-400 hover:bg-red-500 active:bg-red-400 px-3 py-1 border-r-2 text-white'>Delete</button></td>
                 </tr>
                 ))}
             </tbody>

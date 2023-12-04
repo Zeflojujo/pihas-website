@@ -1,5 +1,6 @@
 import "./ContactFormStyles.css";
 import "./AboutUsStyles.css";
+import swal from 'sweetalert';
 import { CiLocationOn } from 'react-icons/ci';
 import { useState } from "react";
 import axios from 'axios';
@@ -25,9 +26,14 @@ function ContactForm () {
     try{
         await axios.post('http://127.0.0.1:3500/messages', contactMessage)
         .then((response) => {
-
             console.log(response);
-            alert("Message sent successfully");
+
+            swal({
+                title: "Good job!",
+                text: "Message sent successfully!",
+                icon: "success",
+                button: "Aww yess!",
+              });
     
             setName("");
             setEmail("");

@@ -1,23 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import swal from 'sweetalert';
-// import CreateNewsModal from './CreateNewsModal';
 import * as Yup from 'yup';
-// import './styles.css'; // Import your CSS file with Tailwind CSS styles
 
 import axios from "../../../api/axios";
 
-const NEWS_URL = 'http://localhost:3500/news';
+const ACADEMIC_URL = 'http://localhost:3500/academic';
 
 
 const validationSchema = Yup.object().shape({
-  title: Yup.string().required('Title is required'),
-  description: Yup.string().required('Description is required'),
+  name: Yup.string().required('name is required'),
+  academicLink: Yup.string().required('AcademicLink is required'),
 });
 
-const NewsListTable = () => {
+const CreateAcademic = () => {
   const [hoveredRow, setHoveredRow] = useState(null);
   const [isModalOpen, setModalOpen] = useState(false);
-  const [newsData, setNewsData] = useState([]);
+  const [academicData, setAcademicData] = useState([]);
 
 
   const openModal = () => {
@@ -41,8 +39,8 @@ const NewsListTable = () => {
   };
 
   const [formData, setFormData] = useState({
-    title: '',
-    description: '',
+    name: '',
+    academicLink: '',
   });
 
   const [errors, setErrors] = useState({});
@@ -64,7 +62,7 @@ const NewsListTable = () => {
       console.log('Form submitted:', formData);
       // Close the modal after submission
       closeModal();
-      handleCreateNews();
+      handleCreateAcademicLink();
     } catch (validationErrors) {
       const newErrors = {};
       validationErrors.inner.forEach((error) => {
@@ -76,13 +74,13 @@ const NewsListTable = () => {
 
 
 
-  const UpdataNewsHandler = async(id) => {
+  const UpdataAcademicHandler = async(id) => {
     console.log(id);
   }
 
 
 
-   const deleteNewsHandler = async(id) => {
+   const deleteAcademicHandler = async(id) => {
     console.log(id)
 
     swal({
@@ -95,15 +93,15 @@ const NewsListTable = () => {
     .then(async (willDelete) => {
       if (willDelete) {
         
-        await axios.delete(`http://localhost:3500/news/${id}`)
+        await axios.delete(`http://localhost:3500/academic/${id}`)
         .then((response) => {
-          console.log('item deleted successfully');
+          console.log('Item deleted successfully');
+          setFormData({
+            name: '',
+            academicLink: '',
+          });
           swal("Poof! Your imaginary file has been deleted!", {
             icon: "success",
-          });
-          setFormData({
-            title: '',
-            description: '',
           });
         })
         .catch((err) => {
@@ -113,47 +111,48 @@ const NewsListTable = () => {
           });
         })
       } else {
-        swal("Your imaginary file is safe!",{
+        swal("Your imaginary file is safe!", {
           icon: 'info'
         });
       }
-    });
+    }); 
 
    }
 
 
 
-    const handleCreateNews = async (e) => {
-    const News = formData;
+    const handleCreateAcademicLink = async (e) => {
+    const academic = formData;
 
     try{
 
-    await axios.post('http://localhost:3500/news', News)
+    await axios.post(ACADEMIC_URL, academic)
       .then((response) => {
           console.log(response);
           console.log(response.data);
+          alert("");
           swal({
             title: "Good job!",
-            text: "News Created successfully!",
+            text: "Academic Link is Created successfully!",
             icon: "success",
             button: "Aww yess!",
           });
 
           setFormData({
-            title: '',
-            description: '',
+            name: '',
+            academicLink: '',
           });
           // navigate('/admin/dashboard');
       }).catch((error) => {
-          // alert("news error", error.message);
+          alert("Academic error", error.message);
           swal({
-            title: "Net-Connection Error!",
-            text: "News fetching error!",
+            title: "Error!",
+            text: "Academic Link fetching error!",
             icon: "warning",
             button: true,
             dangerMode: true,
           });
-          console.log("news failed", error.message);
+          console.log("Academic failed", error.message);
       })
 
     }catch(err){
@@ -177,13 +176,20 @@ const NewsListTable = () => {
     async function fetchData() {
       try{
 
-        await axios.get(NEWS_URL)
+        await axios.get(ACADEMIC_URL)
           .then((response) => {
             console.log(response.data);
-            setNewsData(response.data);
+            setAcademicData(response.data);
           }).catch((error) => {
-              alert("news error", error.message);
-              console.log("news failed", error.message);
+              // alert("Academic error", error.message);
+              swal({
+                title: "Net-Connection Error!",
+                text: "Academic Link fearching error!",
+                icon: "warning",
+                button: true,
+                dangerMode: true,
+              });
+              console.log("Academic failed", error.message);
           })
     
         }catch(err){
@@ -206,13 +212,16 @@ const NewsListTable = () => {
 
       <div className="p-4">
 
+      
+
+      {/* <CreateAcademicModal showModal={isModalOpen} closeModal={closeModal} /> */}
       <div className='relative float-right'>
           <button onClick={openModal} className="bg-[#a19810] text-lg text-white py-2 px-4 rounded">
-            Add News
+            Add Academic
           </button>
         </div>
       <div className="mb-4">
-        <h1 className="text-3xl font-bold text-gray-800 mb-2">News List</h1>
+        <h1 className="text-3xl font-bold text-gray-800 mb-2">Academic Link List</h1>
         
       </div>
 
@@ -221,24 +230,24 @@ const NewsListTable = () => {
           <thead className='bg-gray-50 border-b-2 border-gray-200'>
             <tr>
               <th className="py-2 px-4 border-b text-start">ID</th>
-              <th className="py-2 px-4 border-b text-start ">Title</th>
-              <th className="py-2 px-4 border-b text-start">Description</th>
+              <th className="py-2 px-4 border-b text-start ">Name</th>
+              <th className="py-2 px-4 border-b text-start">Academic Link</th>
               <th className="py-2 px-4 border-b text-start"></th>
               <th className="py-2 px-4 border-b text-start"></th>
             </tr>
           </thead>
           <tbody>
-            {newsData.map((item, index) => (
+            {academicData.map((item, index) => (
               <tr
                 key={index}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >
                 <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{index+1}</td>
-                <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.title}</td>
-                <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.description}</td>
-                <td className={`w-20 py-2 px-4 text-gray-700 text-base border-b  ${hoveredRow === index ? 'bg-gray-200' : ''}`}><button onClick={() => deleteNewsHandler(item.id)} className='border border-solid bg-red-400 hover:bg-red-500 active:bg-red-400 px-3 py-1 border-r-2 text-white'>Delete</button></td>
-                <td className={`w-20 py-2 px-4 text-gray-700 text-base border-b  ${hoveredRow === index ? 'bg-gray-200' : ''}`}><button onClick={() => UpdataNewsHandler(item.id)} className='border border-solid bg-cyan-400 hover:bg-cyan-600 active:bg-cyan-400 px-3 py-1 border-r-2 text-white'>Update</button></td>
+                <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.name}</td>
+                <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.academicLink}</td>
+                <td className={`w-20 py-2 px-4 text-gray-700 text-base border-b  ${hoveredRow === index ? 'bg-gray-200' : ''}`}><button onClick={() => deleteAcademicHandler(item.id)} className='border border-solid bg-red-400 hover:bg-red-500 active:bg-red-400 px-3 py-1 border-r-2 text-white'>Delete</button></td>
+                <td className={`w-20 py-2 px-4 text-gray-700 text-base border-b  ${hoveredRow === index ? 'bg-gray-200' : ''}`}><button onClick={() => UpdataAcademicHandler(item.id)} className='border border-solid bg-cyan-400 hover:bg-cyan-600 active:bg-cyan-400 px-3 py-1 border-r-2 text-white'>Update</button></td>
               </tr>
             ))}
           </tbody>
@@ -273,37 +282,36 @@ const NewsListTable = () => {
             </svg>
           </button>
         </div>
-          <h2 className="text-2xl font-semibold mb-4">CREATE NEWS</h2>
+          <h2 className="text-2xl font-semibold mb-4">CREATE ACADEMIC LINK</h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label htmlFor="title" className="block text-gray-700 font-semibold mb-2">
-                Title
+              <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
+                Name
               </label>
               <input
                 type="text"
-                id="title"
-                name="title"
-                placeholder='Enter your title'
-                value={formData.title}
+                id="name"
+                name="name"
+                placeholder='Enter your name'
+                value={formData.name}
                 onChange={handleChange}
-                className={`w-full border font-normal text-base ${errors.title ? 'border-red-500' : 'border-gray-300'} p-2 rounded`}
+                className={`w-full border font-normal text-base ${errors.name ? 'border-red-500' : 'border-gray-300'} p-2 rounded`}
               />
-              {errors.title && <p className="text-red-500 text-sm mt-1">{errors.title}</p>}
+              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
             </div>
             <div className="mb-4">
-              <label htmlFor="description" className="block text-gray-700 font-semibold mb-2">
-                Description
+              <label htmlFor="academicLink" className="block text-gray-700 font-semibold mb-2">
+                Academic Link
               </label>
-              <textarea
-                id="description"
-                name="description"
-                placeholder='describe here...'
-                value={formData.description}
+              <input
+                id="academicLink"
+                name="academicLink"
+                placeholder='enter academic application link...'
+                value={formData.academicLink}
                 onChange={handleChange}
-                className={`w-full border font-normal text-base ${errors.description ? 'border-red-500' : 'border-gray-300'} p-2 rounded`}
-                rows="4"
+                className={`w-full border font-normal text-base ${errors.academicLink ? 'border-red-500' : 'border-gray-300'} p-2 rounded`}
               />
-              {errors.description && <p className="text-red-500 text-sm mt-1">{errors.description}</p>}
+              {errors.academicLink && <p className="text-red-500 text-sm mt-1">{errors.academicLink}</p>}
             </div>
             <button type="submit" className="bg-[#a19810] text-white px-4 py-2 rounded w-full">
               Submit
@@ -318,4 +326,4 @@ const NewsListTable = () => {
   );
 };
 
-export default NewsListTable;
+export default CreateAcademic;

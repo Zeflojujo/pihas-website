@@ -24,8 +24,8 @@ function Headers() {
           <h1 style={{fontFamily: ""}}>PERAMIHO COLLEGE OF HEALTH AND ALLIED SCIENCES</h1>
           <span style={{ clear: "both" }}>FROM THE PEOPLE FOR THE PEOPLE</span>
           <div className="header4_links">
-            <a
-              href="https://saristz.ac.tz/login/kam"
+            <Link
+              to="https://saris.pihas.ac.tz/"
               style={{
                 display: "inline-block",
                 padding: "5px 10px 5px 10px",
@@ -36,7 +36,7 @@ function Headers() {
 
             >
               PIHAS-SARIS
-            </a>
+            </Link>
             <Link
               to="/"
               style={{

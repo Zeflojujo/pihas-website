@@ -12,6 +12,11 @@ const SideBar = () => {
     { name: "news", link: "/admin/news", icon: FiMessageSquare },
     { name: "profile", link: "/admin/profile", icon: AiOutlineUser },
     { name: "Messages", link: "/admin/contact-messages", icon: FiFolder },
+    { name: "QuickLink", link: "/admin/qlink", icon: FiFolder },
+    { name: "academic", link: "/admin/academic", icon: FiFolder },
+    { name: "slideshow", link: "/admin/slideshow", icon: FiFolder },
+    { name: "Course", link: "/admin/course", icon: FiFolder },
+    { name: "photos", link: "/admin/photos", icon: FiFolder },
   ];
 
   const [open, setOpen] = useState(true);
@@ -51,8 +56,8 @@ const SideBar = () => {
               className={`${
                 open && "hidden"
               } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 
-                    rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 
-                    group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
+                rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 
+                group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
             >
               {menus[0].name}
             </h2>
@@ -78,8 +83,8 @@ const SideBar = () => {
               className={`${
                 open && "hidden"
               } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 
-rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 
-group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
+                rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 
+                group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
             >
               {menus[1].name}
             </h2>
@@ -105,8 +110,8 @@ group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
               className={`${
                 open && "hidden"
               } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 
-                    rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 
-                    group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
+                rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 
+                group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
             >
               {menus[2].name}
             </h2>
@@ -115,7 +120,7 @@ group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
           <NavLink
             to={menus[3].link}
             // key={i}
-            className="flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-[#7b773b] rounded-md group mb-10"
+            className="flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-[#7b773b] rounded-md group"
           >
             <div>{React.createElement(FiFolder, { size: "20" })}</div>
             <h2
@@ -136,6 +141,138 @@ group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
                 group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
             >
               {menus[3].name}
+            </h2>
+          </NavLink>
+
+          <NavLink
+            to={menus[4].link}
+            // key={i}
+            className="flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-[#7b773b] rounded-md group"
+          >
+            <div>{React.createElement(FiFolder, { size: "20" })}</div>
+            <h2
+              style={{
+                transitionDelay: `${4 + 1}00ms`,
+              }}
+              className={`whitespace-pre duration-500 ${
+                !open && "opacity-0 translate-x-28 overflow-hidden"
+              }`}
+            >
+              {menus[4].name}
+            </h2>
+            <h2
+              className={`${
+                open && "hidden"
+              } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 
+                rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 
+                group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
+            >
+              {menus[4].name}
+            </h2>
+          </NavLink>
+
+          <NavLink
+            to={menus[5].link}
+            // key={i}
+            className="flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-[#7b773b] rounded-md group"
+          >
+            <div>{React.createElement(FiFolder, { size: "20" })}</div>
+            <h2
+              style={{
+                transitionDelay: `${5 + 1}00ms`,
+              }}
+              className={`whitespace-pre duration-500 ${
+                !open && "opacity-0 translate-x-28 overflow-hidden"
+              }`}
+            >
+              {menus[5].name}
+            </h2>
+            <h2
+              className={`${
+                open && "hidden"
+              } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 
+                rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 
+                group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
+            >
+              {menus[5].name}
+            </h2>
+          </NavLink>
+          <NavLink
+            to={menus[6].link}
+            // key={i}
+            className="flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-[#7b773b] rounded-md group"
+          >
+            <div>{React.createElement(FiFolder, { size: "20" })}</div>
+            <h2
+              style={{
+                transitionDelay: `${6 + 1}00ms`,
+              }}
+              className={`whitespace-pre duration-500 ${
+                !open && "opacity-0 translate-x-28 overflow-hidden"
+              }`}
+            >
+              {menus[6].name}
+            </h2>
+            <h2
+              className={`${
+                open && "hidden"
+              } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 
+                rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 
+                group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
+            >
+              {menus[6].name}
+            </h2>
+          </NavLink>
+          <NavLink
+            to={menus[7].link}
+            // key={i}
+            className="flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-[#7b773b] rounded-md group"
+          >
+            <div>{React.createElement(FiFolder, { size: "20" })}</div>
+            <h2
+              style={{
+                transitionDelay: `${7 + 1}00ms`,
+              }}
+              className={`whitespace-pre duration-500 ${
+                !open && "opacity-0 translate-x-28 overflow-hidden"
+              }`}
+            >
+              {menus[7].name}
+            </h2>
+            <h2
+              className={`${
+                open && "hidden"
+              } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 
+                rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 
+                group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
+            >
+              {menus[7].name}
+            </h2>
+          </NavLink>
+          <NavLink
+            to={menus[8].link}
+            // key={i}
+            className="flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-[#7b773b] rounded-md group"
+          >
+            <div>{React.createElement(FiFolder, { size: "20" })}</div>
+            <h2
+              style={{
+                transitionDelay: `${8 + 1}00ms`,
+              }}
+              className={`whitespace-pre duration-500 ${
+                !open && "opacity-0 translate-x-28 overflow-hidden"
+              }`}
+            >
+              {menus[8].name}
+            </h2>
+            <h2
+              className={`${
+                open && "hidden"
+              } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 
+                rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 
+                group-hover:left-14 group-hover:duration-200 group-hover:w-fit`}
+            >
+              {menus[8].name}
             </h2>
           </NavLink>
           {/* ))}  */}

@@ -1,13 +1,47 @@
 import { NavLink } from "react-router-dom";
 import "./NavbarStyles.css";
 import { BiMenu } from "react-icons/bi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+import axios from "axios";
+
+const NEWS_URL = 'http://localhost:3500/academic';
 
 function MainPage() {
     const [showme, setShowMe] = useState(false);
+    const [academicData, setAcademicData] = useState([]);
     const handleShowMe = () => {
       setShowMe(!showme);
     };
+
+    useEffect(() => {
+
+      async function fetchData() {
+        try{
+  
+          await axios.get(NEWS_URL)
+            .then((response) => {
+              console.log(response.data);
+              setAcademicData(response.data);
+            }).catch((error) => {
+                alert("news error", error.message);
+                console.log("news failed", error.message);
+            })
+      
+          }catch(err){
+            if(!err) {
+              console.log('No server Response');
+            }
+            else if(!err?.status === 401) {
+              console.log('Unauthorized');
+            }
+            else{
+              console.log("rest error", err);
+            }
+          }
+      }
+      fetchData();
+    },[]);
 
   return (
     <>
@@ -70,13 +104,15 @@ function MainPage() {
               <i className="fa fa-angle-double-down" aria-hidden="true"></i>
             </button>
             <div className="dropdownheader4-content">
+            {academicData.map((item, index) => (
               <NavLink
-                href="https://kamsaris.ac.tz/"
+                to={item.academicLink}
                 style={{ lineHeight: "1" }}
               >
-                PIHAS-Saris
+                {item.name}
               </NavLink>
-              <NavLink
+            ))}
+              {/* <NavLink
                 href="https://kamsaris.ac.tz/"
                 style={{ lineHeight: "1" }}
               >
@@ -87,7 +123,7 @@ function MainPage() {
                 style={{ lineHeight: "1" }}
               >
                 E-Learning
-              </NavLink>
+              </NavLink> */}
             </div>
           </div>
           

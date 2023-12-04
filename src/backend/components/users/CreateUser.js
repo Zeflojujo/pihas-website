@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import CreateNewsModal from './CreateNewsModal';
-import DeleteModal from '../layouts/DeleteModal';
+import swal from 'sweetalert';
 import * as Yup from 'yup';
 // import './styles.css'; // Import your CSS file with Tailwind CSS styles
 
@@ -18,32 +17,7 @@ const CreateUser = () => {
   const [hoveredRow, setHoveredRow] = useState(null);
   const [isModalOpen, setModalOpen] = useState(false);
   const [userData, setUserData] = useState([]);
-  const [userId, setUserId] = useState(null);
-  const [hasSuccess, setHasSuccess] = useState(false);
-  const [successMessage, setSuccessMessage] = useState("");
-  const [hasError, setHasError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-  const [isPopupOpen, setPopupOpen] = useState(false);
-  const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
 
-  const handleDelete = () => {
-    // Handle the delete action here
-    deleteUserHandler(userId);
-    setDeleteModalOpen(false);
-  };
-
-  const handleCancel = () => {
-    setDeleteModalOpen(false);
-  };
-  const DeleteModal = (id) => {
-    setUserId(id)
-    setDeleteModalOpen(true)
-  };
-
-
-  const closePopup = () => {
-    setPopupOpen(false);
-  };
 
   const openModal = () => {
     setModalOpen(true);
@@ -105,22 +79,29 @@ const CreateUser = () => {
 
     try{
 
-    await axios.post('https://pihas-website.on.fleek.co/users', admin)
+    await axios.post(NEWS_URL, admin)
       .then((response) => {
-          alert("Admin Registered successfully");
-
+          swal({
+            title: "Good job!",
+            text: "Admin is Registered successfully",
+            icon: "success",
+            button: "Aww yess!",
+          });
           setFormData({
             user: '',
             pwd: '',
           });
           // navigate('/admin/dashboard');
       }).catch((error) => {
-          alert("registration error", error.message);
+          // alert("registration error", error.message);
+          swal({
+            title: "Error!",
+            text: error.response.data.message,
+            icon: "warning",
+            button: true,
+            dangerMode: true,
+          });
           console.log("registration failed", error.message);
-          setErrorMessage(`${error.response.data.message}`);
-          setHasError(true)
-          setPopupOpen(true)
-
       })
 
     }catch(err){
@@ -139,24 +120,44 @@ const CreateUser = () => {
     }
   }
 
-
   const deleteUserHandler = async(id) => {
     console.log(id);
 
-    await axios.delete(`https://pihas-website.on.fleek.co/users/${id}`)
-    .then((response) => {
-      setDeleteModalOpen(true);
-      alert('user deleted successfully')
-      setSuccessMessage("Admin deleted successfuly!")
-      setHasSuccess(true);
-      setPopupOpen(true)
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this imaginary file!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
     })
-    .catch((erro) => {
-      console.log(erro.response.data.message)
-      setErrorMessage(`${erro.response.data.message}`);
-      setHasError(true)
-      setPopupOpen(true)
-    })
+    .then(async (willDelete) => {
+      if (willDelete) {
+        
+        await axios.delete(`http://localhost:3500/users/${id}`)
+        .then((response) => {
+          console.log(response)
+          setFormData({
+            user: '',
+            pwd: '',
+          });
+          swal("Poof! Your imaginary file has been deleted!", {
+            icon: "success",
+          });
+        })
+        .catch((erro) => {
+          console.log(erro.response.data.message)
+          swal(erro.response.data.message, {
+            icon: "warning",
+          });
+        })
+      } else {
+        swal("Your imaginary file is safe!", {
+          icon: "info"
+        });
+      }
+    });
+
+    
   }
 
   useEffect(() => {
@@ -164,16 +165,21 @@ const CreateUser = () => {
     async function fetchData() {
       try{
 
-        await axios.get('https://pihas-website.on.fleek.co/users')
+        await axios.get(NEWS_URL)
           .then((response) => {
             console.log("object", response.data);
             setUserData(response.data)
           }).catch((erro) => {
-              alert("Fetch user error", erro.message);
+              // alert("Fetch user error", erro.message);
+              swal({
+                title: "Net-Connection Error!",
+                text: "Fetching user error",
+                icon: "warning",
+                button: true,
+                dangerMode: true,
+              });
               console.log("Fetch user failed", erro.message);
-              setErrorMessage(`${erro.response.data.message}`);
-              setHasError(true)
-              setPopupOpen(true)
+              // setErrorMessage(`${erro.response.data.message}`);
 
           })
     
@@ -190,43 +196,13 @@ const CreateUser = () => {
         }
     }
     fetchData();
-  },[formData, ]);
+  },[formData]);
 
 
   return (
     <>
-      {
-        isPopupOpen && hasError? 
-            <div className='w-[50%] m-auto rounded-md ease-in-out duration-500 flex justify-center items-center bg-red-300 py-3 font-semibold text-white text-base'>{errorMessage}</div> 
-          : isPopupOpen && hasSuccess?
-          <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-8 rounded shadow-md relative">
-            {/* Close Button */}
-            <button
-              onClick={closePopup}
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-            >
-              &times;
-            </button>
-            {/* Success Message */}
-            <p className="text-green-500 text-lg font-semibold">
-              {successMessage}
-            </p>
-          </div>
-        </div>
-
-              : ""
-
-      }
       <div className="relative p-4">
 
-      <DeleteModal
-        isOpen={isDeleteModalOpen}
-        onCancel={handleCancel}
-        onDelete={handleDelete}
-      />
-
-      {/* <CreateNewsModal showModal={isModalOpen} closeModal={closeModal} /> */}
       <div className='relative float-right width-auto shadow-lg'>
           <button onClick={openModal} className="bg-[#a19810] text-lg text-white py-2 px-4 rounded">
             Add Admin
@@ -243,7 +219,7 @@ const CreateUser = () => {
             <tr>
               <th className="py-2 px-4 border-b text-start font-semibold tracking-wide ">ID</th>
               <th className="py-2 px-4 border-b text-start font-semibold tracking-wide ">Name</th>
-              <th className="py-2 px-4 border-b text-start font-semibold tracking-wide whitespace-nowrap">Password</th>
+              <th className="py-2 px-4 border-b text-start font-semibold tracking-wide whitespace-normal">Password</th>
               <th className="py-2 px-4 border-b text-start font-semibold tracking-wide "></th>
               <th className="py-2 px-4 border-b text-start font-semibold tracking-wide "></th>
               
@@ -251,7 +227,7 @@ const CreateUser = () => {
           </thead>
           <tbody className='divide-y divide-gray-100'>
             {userData.map((item, index) => (
-              <tr
+               <tr
                 key={item.username}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
@@ -259,17 +235,15 @@ const CreateUser = () => {
                 <td className={`py-2 px-4 font-bold w-40 text-blue-500 hover:underline text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{index+101}</td>
                 <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.username}</td>
                 <td className={`py-2 px-4 text-gray-700 text-base border-b ${hoveredRow === index ? 'bg-gray-200' : ''}`}>{item.password}</td>
-                <td className={`py-2 px-4 text-gray-700 text-base border-b  ${hoveredRow === index ? 'bg-gray-200' : ''}`}><button onClick={() => DeleteModal(item.id) } className='border border-solid bg-red-400 hover:bg-red-500 active:bg-red-400 px-3 py-1 border-r-2 text-white'>Delete</button></td>
+                <td className={`py-2 px-4 text-gray-700 text-base border-b  ${hoveredRow === index ? 'bg-gray-200' : ''}`}><button onClick={() => deleteUserHandler(item.id) } className='border border-solid bg-red-400 hover:bg-red-500 active:bg-red-400 px-3 py-1 border-r-2 text-white'>Delete</button></td>
                 <td className={`py-2 px-4 text-gray-700 text-base border-b  ${hoveredRow === index ? 'bg-gray-200' : ''}`}><button className='border border-solid bg-cyan-400 hover:bg-cyan-600 active:bg-cyan-400 px-3 py-1 border-r-2 text-white'>Update</button></td>
-              </tr>
-            ))}
+              </tr> 
+             ))}
           </tbody>
         </table>
       </div>
       </div>
     
-    
-
       <div className={`fixed top-0 left-0 w-full h-full flex items-center justify-center ${isModalOpen ? '' : 'hidden'}`}>
       
         <div className="bg-gray-800 bg-opacity-75 w-full h-full absolute"></div>
